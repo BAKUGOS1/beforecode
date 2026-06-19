@@ -1,59 +1,41 @@
-# Folder Index
+# Repository Index
 
-This page explains the repository structure.
+## Start Here
 
-## docs
+- [Getting Started](getting-started.md)
+- [Documentation Workflow](documentation-workflow.md)
+- [Project Type Tracks](project-types.md)
+- [AI Coding Handoff](ai-coding-handoff.md)
+- [Roadmap](roadmap.md)
 
-Guides that explain how to use BeforeCode.
+## Reusable Assets
 
-Important files:
+- [Template Catalog](../templates/README.md)
+- [Readiness Checklists](../checklists/README.md)
+- [AI Prompt Library](../prompts/README.md)
+- [Example Packs](../examples/README.md)
 
-- `getting-started.md`
-- `documentation-workflow.md`
-- `project-types.md`
-- `ai-coding-handoff.md`
-- `01-research-report.md`
+## Complete Examples
 
-## templates
+- [MiniCRM SaaS CRM](../examples/saas-crm/README.md)
+- [TaskPilot AI Agent](../examples/ai-agent/README.md)
 
-Reusable Markdown templates for project planning.
+## Community and Maintenance
 
-Core templates:
+- [Contributing](../CONTRIBUTING.md)
+- [Code of Conduct](../CODE_OF_CONDUCT.md)
+- [Support](../SUPPORT.md)
+- [Security](../SECURITY.md)
+- [Changelog](../CHANGELOG.md)
+- [License](../LICENSE)
 
-- `project-brief.md`
-- `research-report.md`
-- `prd.md`
-- `trd.md`
-- `database-schema.md`
-- `api-documentation.md`
-- `qa-test-plan.md`
-- `implementation-plan.md`
+## Repository Structure
 
-Extended templates:
-
-- `business-requirements.md`
-- `srs.md`
-- `ux-flows.md`
-- `ui-system.md`
-- `permission-matrix.md`
-- `deployment-plan.md`
-- `decision-record.md`
-
-## checklists
-
-Review checklists for readiness and quality.
-
-- `pre-build-checklist.md`
-- `prd-review-checklist.md`
-- `technical-readiness-checklist.md`
-- `api-readiness-checklist.md`
-- `qa-readiness-checklist.md`
-- `launch-readiness-checklist.md`
-
-## prompts
-
-Prompt templates for creating, reviewing, and building from docs.
-
-## examples
-
-Filled examples that show how templates can be used in real projects.
+```text
+.github/       Issue, pull request, and quality automation
+docs/          Guides and roadmap
+templates/     Reusable source documents
+checklists/    Review and release gates
+prompts/       AI-assisted planning and implementation prompts
+examples/      Filled reference documentation packs
+```
