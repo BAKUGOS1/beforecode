@@ -1,11 +1,21 @@
 name: CLI test
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "bin/**"
+      - "src/**"
+      - "tests/**"
+      - "templates/**"
+      - "package.json"
+      - ".github/workflows/cli-test.yml"
   pull_request:
     paths:
       - "bin/**"
       - "src/**"
       - "tests/**"
+      - "templates/**"
       - "package.json"
       - ".github/workflows/cli-test.yml"
   workflow_dispatch:
@@ -26,3 +36,5 @@ jobs:
       - run: node ./bin/beforecode.js list
       - run: node ./bin/beforecode.js init --type saas --docs tmp-docs
       - run: node ./bin/beforecode.js check --type saas --docs tmp-docs
+      - run: node ./bin/beforecode.js score --type saas --docs tmp-docs
+      - run: node ./bin/beforecode.js handoff --name "CI Demo" --docs tmp-docs
