@@ -11,6 +11,9 @@
 - [x] Support dry-run and explicit force modes
 - [x] Add Node.js test workflow
 - [x] Document GitHub installation from `main`
+- [x] Keep runtime and package versions synchronized
+- [x] Verify the packed CLI in a clean consumer project
+- [x] Add manual protected npm release automation
 
 ## v0.2 — Guided Setup
 
@@ -31,8 +34,8 @@
 ## v1.0 — Stable Distribution
 
 - [ ] Publish and maintain the npm package
+- [ ] Configure npm trusted publishing after the first release
 - [ ] Stable command and configuration contracts
 - [ ] Versioned template packs
 - [ ] Upgrade and migration guidance
-- [ ] Automated release process
 - [ ] Documentation website integration
