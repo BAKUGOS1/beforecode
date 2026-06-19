@@ -2,7 +2,7 @@
 
 The roadmap describes direction, not a guaranteed schedule. Contributions and real user feedback may change priorities.
 
-## 0.2 — Professional Open-Source Foundation
+## 0.2 — Professional Foundation and CLI MVP
 
 - [x] Complete MIT license and community health files
 - [x] Professional README and repository navigation
@@ -12,6 +12,10 @@ The roadmap describes direction, not a guaranteed schedule. Contributions and re
 - [x] Strengthen AI generation, build, audit, and test prompts
 - [x] Complete MiniCRM SaaS CRM example
 - [x] Complete TaskPilot AI agent example
+- [x] Add CLI document generation by project type
+- [x] Add readiness check and score commands
+- [x] Add AI handoff generation
+- [x] Add CLI tests on direct `main` updates
 
 ## 0.3 — More Reference Packs
 
@@ -21,14 +25,14 @@ The roadmap describes direction, not a guaranteed schedule. Contributions and re
 - [ ] Open-source CLI/library pack
 - [ ] Data/analytics project pack
 
-## 0.4 — Automation
+## 0.4 — Smarter Automation
 
-- [ ] Template manifest and machine-readable metadata
 - [ ] Interactive project questionnaire
-- [ ] CLI to generate selected document tracks
-- [ ] Cross-document terminology and link checks
-- [ ] Documentation completeness report
-- [ ] Export bundles for popular AI coding agents
+- [ ] Template variables and richer project configuration
+- [ ] Section-level document quality checks
+- [ ] Requirement traceability and cross-document terminology checks
+- [ ] Export profiles for popular AI coding agents
+- [ ] npm publishing and release automation
 
 ## 0.5 — Documentation Experience
 
@@ -40,8 +44,8 @@ The roadmap describes direction, not a guaranteed schedule. Contributions and re
 
 ## 1.0 — Stable Planning System
 
-- [ ] Stable template contracts and versioning policy
-- [ ] Upgrade/migration guide for template changes
+- [ ] Stable CLI and template contracts
+- [ ] Versioned template packs and upgrade guide
 - [ ] Complete core example coverage
 - [ ] Automated release process
 - [ ] Maintainer and governance model
