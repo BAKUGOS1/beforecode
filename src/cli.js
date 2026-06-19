@@ -6,8 +6,7 @@ import { checkCommand } from "./commands/check.js";
 import { scoreCommand } from "./commands/score.js";
 import { handoffCommand } from "./commands/handoff.js";
 import { listCommand } from "./commands/list.js";
-
-const VERSION = "0.1.0";
+import { VERSION } from "./version.js";
 
 export async function runCli(argv, context = { cwd: process.cwd() }) {
   const options = parseArgs(argv);
