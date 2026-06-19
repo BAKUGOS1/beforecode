@@ -1,44 +1,63 @@
 # UI System
 
-## Principles
+## 1. Principles
 
-Write the visual and usability principles.
+Define visual, interaction, accessibility, and content principles that guide trade-offs.
 
-## Colors
+## 2. Foundations
 
-List main color tokens.
+### Color
 
-| Token | Value | Usage |
-|---|---|---|
-| primary |  |  |
-| background |  |  |
-| text |  |  |
+| Token | Light | Dark | Usage | Contrast requirement |
+|---|---|---|---|---|
+| color-bg |  |  |  |  |
 
-## Typography
+### Typography
 
-List fonts, sizes, and text styles.
+| Token | Font | Size/line | Weight | Usage |
+|---|---|---|---|---|
+| text-body |  |  |  |  |
 
-## Components
+### Spacing, radius, elevation, motion, iconography
 
-List reusable UI components.
+Define token scales and usage rules. Avoid one-off values without rationale.
 
-- Buttons
-- Inputs
-- Cards
-- Tables
-- Navigation
-- Dialogs
+## 3. Layout
 
-## States
+Document breakpoints, containers, grids, density, safe areas, and responsive priority.
 
-Define common interface states.
+## 4. Component Inventory
 
-- Loading
-- Empty
-- Success
-- Error
-- Disabled
+| Component | Variants | States | Accessibility | Owner/status |
+|---|---|---|---|---|
+| Button |  | Default/hover/focus/disabled/loading | Name, role, keyboard |  |
 
-## Responsive Rules
+Cover forms, navigation, feedback, overlays, data display, tables, pagination, search/filter, and empty states.
 
-Define mobile, tablet, and desktop behavior.
+## 5. Component Specification
+
+For each important component define anatomy, properties, variants, states, behavior, validation, keyboard interaction, content limits, responsive behavior, and do/don't examples.
+
+## 6. Content Design
+
+Define voice, labels, capitalization, date/number/currency formats, error messages, confirmation language, and destructive-action wording.
+
+## 7. Accessibility
+
+Target standard, contrast, focus, semantics, screen-reader behavior, keyboard operation, touch targets, motion, zoom, and testing tools.
+
+## 8. Theming and Brand
+
+Define theme behavior, logo/mark clear space, color restrictions, imagery, and fallback behavior.
+
+## 9. Implementation Mapping
+
+Map design tokens and components to code packages, naming, versioning, ownership, and deprecation.
+
+## 10. Quality Checklist
+
+- Tokens replace repeated raw values
+- Components include every required state
+- Keyboard and screen-reader behavior are defined
+- Responsive and localization stress cases are covered
+- Design and code use matching names and variants
