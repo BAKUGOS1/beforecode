@@ -14,6 +14,9 @@ The project follows a lightweight version of Keep a Changelog and intends to use
 - `.beforecoderc.json` project configuration
 - AI handoff generation for `AGENTS.md` and project instructions
 - CLI tests and GitHub Actions validation
+- Packed-package verification in a clean temporary consumer project
+- Protected manual npm release workflow with provenance configuration
+- Release runbook covering first publish, trusted publishing, validation, and recovery
 - Professional repository navigation and community health files
 - Complete TaskPilot AI agent documentation pack
 - Complete MiniCRM SaaS CRM documentation pack
@@ -25,11 +28,14 @@ The project follows a lightweight version of Keep a Changelog and intends to use
 - Expanded launch, API, build, and AI handoff guidance
 - Adopted a lightweight direct-to-`main` maintainer workflow with mandatory checks
 - Documented installation directly from the GitHub `main` branch before npm publication
+- Made `package.json` the single version source for CLI output and generated configuration
+- Hardened npm package metadata, included files, repository links, and public publish settings
 
 ### Fixed
 
 - Replaced incomplete license text with the full MIT License
 - Removed the temporary repository setup note
+- Prevented CLI and generated configuration versions from drifting apart
 
 ## 0.1.0 — 2026-06-19
 
