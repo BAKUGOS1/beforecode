@@ -1,28 +1,48 @@
 # BeforeCode
 
-Plan your software project before writing code.
+> Plan your software project before writing code.
 
-BeforeCode is a documentation starter kit for software projects. It includes templates, checklists, examples, and prompts for planning a project before implementation.
+BeforeCode is a Markdown-first documentation starter kit for software projects.
+
+It helps you plan product scope, technical structure, data design, API behavior, QA checks, and build execution before development starts.
 
 ## Core workflow
 
-1. Project Brief
-2. Research Report
-3. PRD
-4. TRD
-5. Database Schema
-6. API Documentation
-7. QA Test Plan
-8. Implementation Plan
+```text
+Idea → Research → PRD → TRD → Database → API → QA → Build Plan
+```
 
-## Folders
+## What's inside
 
 - `docs/` — guides and workflow notes
-- `templates/` — reusable Markdown templates
-- `checklists/` — review checklists
+- `templates/` — reusable documentation templates
+- `checklists/` — review and readiness checklists
 - `prompts/` — prompt templates
-- `examples/` — filled example docs
+- `examples/` — filled example documentation packs
+
+## Start here
+
+1. Read `docs/getting-started.md`
+2. Check `docs/project-types.md`
+3. Use `templates/project-brief.md`
+4. Create PRD and TRD
+5. Add database, API, QA, and build docs
+6. Review with checklists
+
+## Best for
+
+- SaaS apps
+- CRM systems
+- AI agents
+- Portfolio projects
+- E-commerce projects
+- Open-source tools
+- Student projects
 
 ## Status
 
-Early MVP.
+Early MVP. Templates and examples are being expanded.
+
+## License
+
+MIT License.
