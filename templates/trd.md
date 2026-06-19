@@ -1,46 +1,104 @@
 # Technical Requirements Document
 
-## 1. Overview
+## Document Control
 
-Describe how the project will be built.
+| Field | Value |
+|---|---|
+| System |  |
+| Technical owner |  |
+| Status | Draft / Review / Approved |
+| Version |  |
+| Related PRD |  |
 
-## 2. Tech Stack
+## 1. Technical Objective
 
-| Layer | Tool | Reason |
+Summarize the system outcome, scale, critical constraints, and quality attributes.
+
+## 2. Requirements Traceability
+
+| Product requirement | Technical response | Verification |
 |---|---|---|
-| Frontend |  |  |
-| Backend |  |  |
-| Database |  |  |
-| Hosting |  |  |
+| FR-001 |  | Test / metric / review |
 
-## 3. Architecture
+## 3. Architecture Principles
 
-Describe the main parts of the system and how they connect.
+List decisions such as tenant isolation, least privilege, stateless services, transactional boundaries, portability, and build-versus-buy preferences.
 
-## 4. Folder Structure
+## 4. System Context
 
-Add the planned folder structure.
+Show users, clients, external systems, trust boundaries, and main data flows.
 
-## 5. Data Model
+```text
+Client → Edge/API → Services → Data stores → External systems
+```
 
-Link or describe the database schema.
+## 5. Technology Stack
 
-## 6. API Plan
+| Layer | Choice | Version policy | Reason | Rejected option |
+|---|---|---|---|---|
+| Frontend |  |  |  |  |
+| Backend |  |  |  |  |
+| Database |  |  |  |  |
+| Infrastructure |  |  |  |  |
 
-List the API groups and their purpose.
+## 6. Component Architecture
 
-## 7. Roles and Access
+For each component define responsibility, inputs/outputs, dependencies, state, scaling, and failure behavior.
 
-Define who can view, create, update, and delete data.
+## 7. Repository and Module Structure
 
-## 8. Error Handling
+Add the planned structure and ownership boundaries. Avoid organizing only by file type when features need independent evolution.
 
-Define common error cases and expected behavior.
+## 8. Data Architecture
 
-## 9. Performance Targets
+Describe source of truth, tenancy, transactions, consistency, caching, search, retention, backup, migration, and archival. Link the schema document.
 
-Define page load and response-time targets.
+## 9. API and Integration Architecture
 
-## 10. Deployment Notes
+Define protocols, versioning, authentication, authorization, idempotency, pagination, timeouts, retries, webhooks/events, and compatibility.
 
-Define how the project will be released.
+## 10. Security and Privacy
+
+Document identity, session handling, authorization, secrets, encryption, validation, dependency controls, audit, sensitive data, threat boundaries, and incident requirements.
+
+## 11. Reliability and Failure Handling
+
+Define timeouts, retry classes, circuit breaking, queues, dead letters, recovery, disaster scenarios, degraded modes, and data reconciliation.
+
+## 12. Performance and Scale
+
+| Metric | Expected | Limit/SLO | Test method |
+|---|---:|---:|---|
+| Concurrent users |  |  |  |
+| API latency |  |  |  |
+| Data volume |  |  |  |
+
+Include capacity assumptions and known bottlenecks.
+
+## 13. Observability
+
+Define logs, metrics, traces, audit events, dashboards, alerts, correlation IDs, and sensitive-data redaction.
+
+## 14. Environments and Configuration
+
+Define local, test, staging, and production parity; configuration ownership; feature flags; and secret management.
+
+## 15. Testing Strategy
+
+Cover unit, integration, contract, migration, end-to-end, security, performance, accessibility, and failure-injection testing.
+
+## 16. Deployment and Migration
+
+Describe CI/CD gates, migration order, compatibility window, rollout, rollback, backup, and post-release verification.
+
+## 17. Technical Risks and Decisions
+
+Link important choices to decision records. List risks, signals, mitigations, and owners.
+
+## Technical Acceptance
+
+- Architecture satisfies approved product and non-functional requirements
+- Trust boundaries and authorization are explicit
+- Data and side-effect consistency rules are defined
+- Failure, recovery, deployment, and rollback are testable
+- Cost and scale assumptions are visible
