@@ -1,39 +1,55 @@
 # Documentation Workflow
 
-BeforeCode follows a simple planning flow.
-
 ```text
-Idea → Research → PRD → TRD → Database → API → QA → Build Plan
+Discover → Decide → Specify → Design → Verify → Build → Release → Learn
 ```
 
-## 1. Idea
+## 1. Discover
 
-Start with a short project brief. Define the problem, users, goals, and first version scope.
+Use the Project Brief and Research Report to understand the problem, users, evidence, alternatives, constraints, and opportunity.
 
-## 2. Research
+**Gate:** the problem is worth solving and the primary user is known.
 
-Study existing products, common patterns, gaps, and user expectations.
+## 2. Decide
 
-## 3. PRD
+Use business requirements, product principles, release scope, and decision records to lock objectives, trade-offs, MVP, and non-goals.
 
-Turn the idea into clear product requirements, features, user stories, and acceptance criteria.
+**Gate:** decision owners approve a bounded outcome.
 
-## 4. TRD
+## 3. Specify
 
-Define the technical approach, stack, architecture, roles, and deployment notes.
+Use the PRD/SRS to define journeys, roles, requirements, business rules, lifecycle states, data needs, edge cases, and measurable acceptance criteria.
 
-## 5. Database
+**Gate:** expected behavior is testable without major guesswork.
 
-Plan tables, fields, relations, indexes, and audit fields.
+## 4. Design
 
-## 6. API
+Use UX flows, UI system, TRD, database schema, API docs, and permission matrix to define how the experience and system satisfy requirements.
 
-Plan endpoints, request format, responses, pagination, filters, and status codes.
+**Gate:** architecture, security, data, integrations, failure behavior, and operational ownership are understood.
 
-## 7. QA
+## 5. Verify the Plan
 
-Create test cases before release. Include positive, negative, edge, and regression cases.
+Use review checklists and the QA plan to trace critical requirements into test coverage. Resolve conflicts before implementation makes them expensive.
 
-## 8. Build Plan
+**Gate:** product, engineering, design, QA, and relevant security/data owners accept the plan.
 
-Convert the documents into a phase-by-phase execution plan.
+## 6. Build
+
+Use the Implementation Plan for milestones and a Build Plan for each bounded phase. Implement vertical slices with tests and observability.
+
+**Gate:** each phase produces demonstrable, verified behavior.
+
+## 7. Release
+
+Use the Deployment Plan and Launch Checklist for migration, staged rollout, monitoring, support, communication, and rollback.
+
+**Gate:** go/no-go decision has evidence and accountable owners.
+
+## 8. Learn and Update
+
+Compare results with success metrics, user feedback, incidents, and operational data. Update requirements and decision records before the next cycle.
+
+## Change Rule
+
+When a decision changes, update the earliest source-of-truth document affected, then review downstream UX, technical, data, API, QA, and implementation documents for impact.
