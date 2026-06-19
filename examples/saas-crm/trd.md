@@ -1,0 +1,3 @@
+# MiniCRM TRD
+
+Draft example.
