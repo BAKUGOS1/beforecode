@@ -11,7 +11,7 @@ A spec-first software planning toolkit and CLI for humans and AI coding agents.
 [![License: MIT](https://img.shields.io/badge/License-MIT-111827.svg)](LICENSE)
 [![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-339933.svg)](package.json)
 [![Documentation quality](https://img.shields.io/badge/docs-quality%20checked-0891b2.svg)](.github/workflows/docs-quality.yml)
-[![CLI tests](https://img.shields.io/badge/CLI-tested-7c3aed.svg)](.github/workflows/cli-test.yml)
+[![CLI tests](https://img.shields.io/badge/CLI-package%20verified-7c3aed.svg)](.github/workflows/cli-test.yml)
 
 [Install](#install-beforecode) · [How it works](#how-beforecode-works) · [Project types](#choose-a-project-type) · [Examples](#complete-reference-packs) · [Contribute](CONTRIBUTING.md)
 
@@ -246,14 +246,15 @@ A researched agent architecture covering durable execution, checkpoints, approva
 beforecode/
 ├── bin/           CLI executable
 ├── src/           CLI commands, generator, scoring, and project presets
+├── scripts/       Package and release verification scripts
 ├── tests/         Node.js test suite
-├── docs/          Usage guides, CLI design, and roadmap
+├── docs/          Usage guides, CLI design, release runbook, and roadmap
 ├── templates/     Reusable planning documents
 ├── checklists/    Quality and readiness gates
 ├── prompts/       AI-assisted documentation and build prompts
 ├── examples/      Complete reference documentation packs
 ├── assets/        Repository visual assets
-└── .github/       Issue forms and quality automation
+└── .github/       Issue forms, tests, and release automation
 ```
 
 ## Safety and Quality
@@ -262,7 +263,11 @@ beforecode/
 - `--dry-run` previews generation without writing files.
 - Documentation Markdown is checked through GitHub Actions.
 - CLI behavior is covered by Node.js tests and command smoke tests.
+- Every package candidate is packed, inspected, installed in a clean temporary project, executed, and tested for document generation.
+- npm publishing is manual, protected by a GitHub environment, and configured for provenance; pushes to `main` never publish automatically.
 - Generated content is a starting structure; product, security, legal, and architecture decisions remain human-owned.
+
+Read the [release runbook](docs/releasing.md) for first-publish requirements and the protected release process.
 
 ## README and Documentation Ownership
 
@@ -274,12 +279,13 @@ The project uses a lightweight direct-to-`main` maintainer workflow. Small chang
 
 ## Project Status
 
-The template library, CLI MVP, and two complete example packs are ready for use. The npm package has not been published yet, so installation currently uses the GitHub `main` branch.
+The template library, CLI MVP, package verification pipeline, protected release workflow, and two complete example packs are ready for use. The npm package has not been published yet, so installation currently uses the GitHub `main` branch.
 
-Next priorities include guided setup, stronger quality scoring, more reference packs, traceability checks, npm publishing, and a documentation website.
+Next priorities include the first npm publication, guided setup, stronger quality scoring, more reference packs, traceability checks, and a documentation website.
 
 - [Main roadmap](docs/roadmap.md)
 - [CLI roadmap](docs/cli-roadmap.md)
+- [Release runbook](docs/releasing.md)
 - [Changelog](CHANGELOG.md)
 
 ## Contributing
