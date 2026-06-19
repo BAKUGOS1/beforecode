@@ -1,65 +1,90 @@
 # Getting Started
 
-BeforeCode is designed to help you plan before you build.
+BeforeCode is modular. A weekend project should not complete the same document set as a regulated multi-tenant platform.
 
-## Step 1: Pick project type
+## 1. Choose the Smallest Useful Track
 
-Examples:
-
-- Portfolio
-- SaaS
-- CRM
-- AI agent
-- E-commerce
-- Mobile app
-- Open-source tool
-
-## Step 2: Start with Project Brief
-
-Use:
+### Lean track
 
 ```text
-templates/project-brief.md
+Project Brief → PRD → Build Plan → QA Checklist
 ```
 
-This file defines the idea, problem, users, goals, and scope.
+Use for a personal project, prototype, or small internal tool.
 
-## Step 3: Create PRD
-
-Use:
+### Product track
 
 ```text
-templates/prd.md
+Brief → Research → PRD → UX → TRD → Data/API → QA → Implementation
 ```
 
-This turns the idea into product requirements.
+Use for SaaS, CRM, marketplace, mobile, and team products.
 
-## Step 4: Create technical plan
+### High-risk track
 
-Use:
+Add BRD/SRS, permission matrix, decision records, threat model, migration, evaluation, and deployment planning when security, money, sensitive data, automation, or compliance raises the cost of mistakes.
+
+## 2. Create a Project Docs Folder
 
 ```text
-templates/trd.md
+your-project/
+  docs/
+    01-project-brief.md
+    02-research-report.md
+    03-prd.md
+    04-ux-flows.md
+    05-trd.md
+    06-database-schema.md
+    07-api-documentation.md
+    08-qa-test-plan.md
+    09-implementation-plan.md
 ```
 
-This defines stack, architecture, data, APIs, and deployment.
+Copy from the [template catalog](../templates/README.md).
 
-## Step 5: Plan QA
+## 3. Work in Decision Order
 
-Use:
+1. Confirm the problem and primary user.
+2. Research facts that affect product or architecture decisions.
+3. Lock MVP and non-goals.
+4. Define workflows, roles, states, and acceptance criteria.
+5. Design architecture, data, API, security, and failure behavior.
+6. Map requirements to QA coverage.
+7. Convert the approved specification into phased implementation.
+
+Do not let later documents silently change earlier decisions. Update the source document and record important trade-offs.
+
+## 4. Make Requirements Testable
+
+Weak:
 
 ```text
-templates/qa-test-plan.md
+The dashboard should load quickly.
 ```
 
-This defines how you will test the project.
-
-## Step 6: Build from implementation plan
-
-Use:
+Stronger:
 
 ```text
-templates/implementation-plan.md
+For the expected MVP dataset, the authenticated dashboard should become usable within three seconds at the 95th percentile in the staging performance test.
 ```
 
-This defines build order and delivery phases.
+## 5. Maintain Traceability
+
+Use stable IDs such as `BR-001`, `FR-001`, `NFR-001`, and `TC-001`. Link each critical requirement to architecture, API/data behavior, implementation tasks, and tests.
+
+## 6. Review Before Building
+
+Use the [PRD](../checklists/prd-review-checklist.md), [technical](../checklists/technical-readiness-checklist.md), and [pre-build](../checklists/pre-build-checklist.md) checklists.
+
+## 7. Hand Off Safely
+
+For AI coding tools, use the [AI coding handoff guide](ai-coding-handoff.md). Humans still approve scope, permissions, destructive actions, security, and release decisions.
+
+## 8. Learn From Complete Packs
+
+- [MiniCRM SaaS CRM](../examples/saas-crm/README.md)
+- [TaskPilot AI Agent](../examples/ai-agent/README.md)
+
+## Done Means
+
+Your docs are ready to build when a developer or AI coding agent can explain what to build, what not to build, how the system should behave, how it can fail, who can do what, and how completion will be verified—without inventing major decisions.
