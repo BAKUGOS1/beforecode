@@ -1,69 +1,125 @@
 # Product Requirements Document
 
-## 1. Overview
+## Document Control
 
-Briefly describe the product.
+| Field | Value |
+|---|---|
+| Product |  |
+| Product owner |  |
+| Status | Draft / Review / Approved |
+| Version |  |
+| Target release |  |
 
-## 2. Product Vision
+## 1. Executive Summary
 
-What should this product become?
+Describe the product, user, problem, proposed outcome, and release scope.
 
-## 3. Goals
+## 2. Context and Evidence
 
-List measurable product goals.
+Link the approved project brief and research. Summarize only the evidence required to understand product decisions.
 
-## 4. Non-goals
+## 3. Vision and Principles
 
-List what this product will not solve.
+State the long-term direction and 3–6 principles used to resolve product trade-offs.
 
-## 5. Target Users
+## 4. Goals, Non-Goals, and Metrics
 
-Define user groups.
+| Goal | Metric | Baseline | Target |
+|---|---|---:|---:|
+|  |  |  |  |
 
-## 6. User Personas
+List explicit non-goals for this release.
 
-Add user personas and their needs.
+## 5. Users and Roles
 
-## 7. Core Features
+| Persona/role | Jobs to be done | Pain points | Access level |
+|---|---|---|---|
+|  |  |  |  |
 
-List all major features.
+## 6. Scope
 
-## 8. User Stories
+### Must have
 
-Use this format:
+### Should have
 
-```text
-As a [user], I want [action], so that [benefit].
-```
+### Could have
+
+### Out of scope
+
+## 7. Information Architecture
+
+Describe primary navigation, objects, pages, and relationships.
+
+## 8. User Journeys
+
+For every critical journey, document entry condition, steps, decisions, success state, failure recovery, and exit.
 
 ## 9. Functional Requirements
 
-Define exact product behavior.
+Use stable identifiers.
 
-## 10. Non-functional Requirements
+### FR-001 — Requirement name
 
-Define performance, security, reliability, accessibility, and scalability needs.
+**Purpose:**  
+**Actors:**  
+**Preconditions:**  
+**Behavior:**  
+**Business rules:**  
+**Permissions:**  
+**Failure states:**  
+**Acceptance criteria:**
 
-## 11. MVP Scope
+- Given ... when ... then ...
 
-Define the first release scope.
+## 10. Data Requirements
 
-## 12. Future Scope
+List data captured, ownership, validation, lifecycle, import/export, audit, retention, and deletion requirements. Link the database document.
 
-Define later phases.
+## 11. Integrations and API Requirements
 
-## 13. Acceptance Criteria
+List external systems, direction of data flow, permissions, failure expectations, and rate/availability constraints.
 
-Define when each feature is complete.
+## 12. Notifications and Communication
 
-## 14. Edge Cases
+Define trigger, audience, channel, content, user controls, retries, and duplicate prevention.
 
-List unusual scenarios and expected behavior.
+## 13. Non-Functional Requirements
 
-## 15. Risks
+| Area | Requirement | Target / evidence |
+|---|---|---|
+| Performance |  |  |
+| Availability |  |  |
+| Security/privacy |  |  |
+| Accessibility |  |  |
+| Scalability |  |  |
+| Compatibility |  |  |
+| Observability |  |  |
 
-List product, technical, and business risks.
+## 14. States and Edge Cases
 
-## 16. Success Metrics
+Cover loading, empty, filtered-empty, offline, partial, permission denied, conflict, timeout, duplicate submission, archived data, and destructive actions.
 
-Define how success will be measured.
+## 15. Analytics
+
+Define events, properties, privacy constraints, dashboards, and how each metric informs a decision.
+
+## 16. Dependencies and Risks
+
+| Dependency/risk | Owner | Impact | Mitigation | Decision date |
+|---|---|---|---|---|
+|  |  |  |  |  |
+
+## 17. Release and Rollout
+
+Describe migration, feature flags, staged rollout, user communication, support, and rollback criteria.
+
+## 18. Open Questions and Decisions
+
+Link accepted decisions to decision records.
+
+## Release Acceptance
+
+- Every must-have requirement has measurable acceptance criteria
+- Permissions, failures, and edge cases are documented
+- Data, API, UX, QA, and technical documents use consistent terminology
+- Owners approve unresolved risks or remove them before release
