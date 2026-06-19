@@ -15,12 +15,27 @@ The maintainer uses a lightweight trunk-based workflow:
 
 External contributors should normally fork the repository and open a focused pull request because they cannot write directly to `main`.
 
+## Documentation Ownership
+
+The repository maintainer owns the root `README.md` and release-facing documentation.
+
+Update the README in the same change whenever any of these change:
+
+- Installation method or runtime requirement
+- CLI command, flag, output, or safety behavior
+- Supported project type or generated document set
+- Repository structure or primary navigation
+- Public release status, package availability, or roadmap claim
+- Main workflow, diagram, example pack, or user-facing limitation
+
+Contributors own documentation for the behavior they change. A feature is incomplete when its setup, usage, verification, migration, or limitation is undocumented.
+
 ## Ways to Contribute
 
 - Improve an existing template or checklist
 - Add a complete, realistic example pack
 - Strengthen acceptance criteria, edge cases, or security coverage
-- Improve guides, CLI behavior, and AI prompts
+- Improve guides, CLI behavior, diagrams, and AI prompts
 - Report broken links, inconsistencies, or unclear wording
 - Propose a new project-specific documentation track
 
@@ -54,6 +69,12 @@ Strong templates normally include:
 - Acceptance, risk, edge-case, or verification guidance
 - Completion criteria
 
+## Diagram Standard
+
+Use GitHub-native Mermaid for editable flows, dependency graphs, sequences, states, and architecture overviews. Keep diagrams small enough to understand at README width and explain their core meaning in nearby prose.
+
+Use SVG for branded static assets. Do not use screenshots for information that should stay editable and version-controlled.
+
 ## Example-Pack Standard
 
 A new example pack should contain a `README.md`, use one consistent product, and keep names, roles, IDs, requirements, architecture, data, API, and QA rules aligned across documents.
@@ -79,7 +100,7 @@ CLI changes should:
 - Keep `--force` and `--dry-run` behavior predictable
 - Support Node.js 18 or later
 - Include or update automated tests
-- Keep `package.json`, help output, usage docs, and version references aligned
+- Keep `package.json`, help output, README, usage docs, and version references aligned
 - Pass `npm test` and relevant command smoke tests
 
 ## File and Style Rules
@@ -94,13 +115,9 @@ CLI changes should:
 
 ## Required Checks
 
-Documentation changes:
+Documentation changes are checked by the Documentation Quality GitHub Actions workflow.
 
-```bash
-# GitHub Actions runs markdownlint on affected Markdown files
-```
-
-CLI changes:
+CLI changes should also pass:
 
 ```bash
 npm test
