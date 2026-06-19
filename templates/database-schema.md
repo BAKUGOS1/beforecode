@@ -1,55 +1,84 @@
 # Database Schema
 
-## 1. Database Overview
+## 1. Overview
 
-Describe the database choice and purpose.
+Describe database technology, ownership, tenancy model, expected scale, consistency requirements, and source-of-truth boundaries.
 
-## 2. Entities
+## 2. Conventions
 
-List main entities.
+Define primary keys, naming, timestamps, timezone, money, enums, JSON usage, audit fields, and soft-delete policy.
+
+## 3. Relationship Map
 
 ```text
-users
-projects
-tasks
-settings
-activity_logs
+entity_a 1 ── * entity_b
+entity_b * ── 1 entity_c
 ```
 
-## 3. Tables
+Use Mermaid or a separate ERD when relationships are complex.
 
-### Table: users
+## 4. Entity Catalog
 
-| Column | Type | Required | Notes |
+| Entity | Purpose | Owner | Retention |
 |---|---|---|---|
-| id | uuid | yes | primary key |
-| name | text | yes | user name |
-| email | text | yes | unique |
-| created_at | timestamp | yes | creation time |
+|  |  |  |  |
 
-## 4. Relationships
+## 5. Table Definitions
 
-Describe table relationships.
+### table_name
 
-## 5. Indexes
+**Purpose:**  
+**Tenant/ownership:**  
+**Expected volume:**
 
-List indexes for search and performance.
+| Column | Type | Null | Default | Rules / references |
+|---|---|---:|---|---|
+| id | uuid | No | generated | Primary key |
+| created_at | timestamptz | No | now() | UTC |
+| updated_at | timestamptz | No | now() | Updated on mutation |
 
-## 6. Constraints
+Constraints:
 
-List unique, required, and validation rules.
+- Primary, foreign, unique, check, and exclusion constraints
 
-## 7. Audit Fields
+Indexes:
 
-Recommended fields:
+| Index | Columns | Type | Query supported |
+|---|---|---|---|
+|  |  | B-tree / GIN / other |  |
 
-```text
-created_at
-updated_at
-created_by
-updated_by
-```
+Access rules:
 
-## 8. Soft Delete
+- Who can select, insert, update, archive, restore, and delete?
 
-Define whether deleted records should be archived or permanently removed.
+## 6. Data Lifecycle
+
+Define creation, mutation, versioning, archival, restoration, deletion, retention, export, and legal hold.
+
+## 7. Transactions and Concurrency
+
+List operations requiring transactions, locking, optimistic concurrency, idempotency, or reconciliation.
+
+## 8. Migration Strategy
+
+Describe forward/backward compatibility, backfills, zero-downtime changes, rollback/forward-fix, and migration verification.
+
+## 9. Security and Privacy
+
+Document tenant isolation, row/column controls, encryption, sensitive fields, masking, audit, and production access.
+
+## 10. Backup and Recovery
+
+Define backup frequency, restore testing, recovery point objective, and recovery time objective.
+
+## 11. Query and Scale Review
+
+List critical queries, expected cardinality, pagination approach, query-plan verification, and growth assumptions.
+
+## Schema Acceptance
+
+- Every relationship and ownership rule is explicit
+- Constraints protect important invariants
+- Critical queries have an index strategy
+- Deletion and retention are defined
+- Migrations and rollback risks are understood
