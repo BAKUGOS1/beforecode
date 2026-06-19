@@ -9,11 +9,12 @@
 - [AI Coding Handoff](ai-coding-handoff.md)
 - [Roadmap](roadmap.md)
 
-## CLI Design
+## CLI and Distribution
 
 - [CLI PRD](cli-prd.md)
 - [CLI TRD](cli-trd.md)
 - [CLI Roadmap](cli-roadmap.md)
+- [Release Runbook](releasing.md)
 
 ## Reusable Assets
 
@@ -41,9 +42,10 @@
 ```text
 bin/           BeforeCode executable
 src/           CLI commands, generator, scoring, and project presets
-tests/         Node.js CLI tests
-.github/       Issue, pull request, and quality automation
-docs/          Usage guides, architecture, and roadmap
+scripts/       Package and release verification
+tests/         Node.js CLI and version tests
+.github/       Issue, test, documentation, and release automation
+docs/          Usage guides, architecture, release runbook, and roadmap
 templates/     Reusable source documents
 checklists/    Review and release gates
 prompts/       AI-assisted planning and implementation prompts
