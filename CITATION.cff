@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: BeforeCode
+message: If you use BeforeCode in research, teaching, or a published project, please cite the repository.
+type: software
+authors:
+  - family-names: Kumar
+    given-names: Mohit
+repository-code: https://github.com/BAKUGOS1/beforecode
+url: https://github.com/BAKUGOS1/beforecode
+license: MIT
+version: 0.2.0
+date-released: 2026-06-19
+keywords:
+  - product-requirements
+  - software-architecture
+  - documentation
+  - ai-coding
+  - project-planning
