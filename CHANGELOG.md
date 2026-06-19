@@ -8,6 +8,12 @@ The project follows a lightweight version of Keep a Changelog and intends to use
 
 ### Added
 
+- Zero-dependency Node.js CLI with `init`, `add`, `check`, `score`, `handoff`, and `list` commands
+- Project-type presets for small, portfolio, SaaS, CRM, e-commerce, mobile, AI agent, and open-source projects
+- Safe file generation with dry-run and explicit force modes
+- `.beforecoderc.json` project configuration
+- AI handoff generation for `AGENTS.md` and project instructions
+- CLI tests and GitHub Actions validation
 - Professional repository navigation and community health files
 - Complete TaskPilot AI agent documentation pack
 - Complete MiniCRM SaaS CRM documentation pack
@@ -17,6 +23,8 @@ The project follows a lightweight version of Keep a Changelog and intends to use
 
 - Repositioned BeforeCode as a spec-first planning toolkit for humans and AI coding agents
 - Expanded launch, API, build, and AI handoff guidance
+- Adopted a lightweight direct-to-`main` maintainer workflow with mandatory checks
+- Documented installation directly from the GitHub `main` branch before npm publication
 
 ### Fixed
 
