@@ -81,14 +81,14 @@ Evaluation datasets and results
 
 Primary sources reviewed:
 
-- OpenAI, A Practical Guide to Building Agents: https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/
-- LangGraph Overview: https://docs.langchain.com/oss/python/langgraph/overview
-- LangGraph Persistence: https://docs.langchain.com/oss/python/langgraph/persistence
-- LangGraph Interrupts: https://docs.langchain.com/oss/python/langgraph/interrupts
-- Temporal Failure and Error Handling: https://docs.temporal.io/encyclopedia/failures-and-error-handling
-- OpenTelemetry GenAI Semantic Conventions: https://opentelemetry.io/docs/specs/semconv/gen-ai/
-- OWASP LLM01 Prompt Injection: https://genai.owasp.org/llmrisk/llm01-prompt-injection/
-- MCP Authorization Guidance: https://modelcontextprotocol.io/docs/tutorials/security/authorization
+- [OpenAI: A Practical Guide to Building Agents](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/)
+- [LangGraph Overview](https://docs.langchain.com/oss/python/langgraph/overview)
+- [LangGraph Persistence](https://docs.langchain.com/oss/python/langgraph/persistence)
+- [LangGraph Interrupts](https://docs.langchain.com/oss/python/langgraph/interrupts)
+- [Temporal Failure and Error Handling](https://docs.temporal.io/encyclopedia/failures-and-error-handling)
+- [OpenTelemetry GenAI Semantic Conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/)
+- [OWASP LLM01 Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)
+- [MCP Authorization Guidance](https://modelcontextprotocol.io/docs/tutorials/security/authorization)
 
 ## 6. Research Conclusion
 
