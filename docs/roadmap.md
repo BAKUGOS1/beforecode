@@ -1,41 +1,51 @@
 # Roadmap
 
-## v0.1 — Starter Kit Foundation
+The roadmap describes direction, not a guaranteed schedule. Contributions and real user feedback may change priorities.
 
-- [x] README foundation
-- [x] Research report
-- [x] Getting started guide
-- [x] Documentation workflow guide
-- [x] Project type guide
-- [x] Core templates
-- [x] Basic checklists
-- [x] Prompt pack starter
-- [x] Example project starter
+## 0.2 — Professional Open-Source Foundation
 
-## v0.2 — Template Expansion
+- [x] Complete MIT license and community health files
+- [x] Professional README and repository navigation
+- [x] Issue forms, pull request template, and Markdown quality workflow
+- [x] Expand every core planning template
+- [x] Complete API and launch readiness checklists
+- [x] Strengthen AI generation, build, audit, and test prompts
+- [x] Complete MiniCRM SaaS CRM example
+- [x] Complete TaskPilot AI agent example
 
-- [x] Expand implementation plan template
-- [x] Expand deployment plan template
-- [x] Expand UI system template
-- [ ] Expand API readiness checklist
-- [ ] Add release checklist details
-- [x] Add complete SaaS CRM example
+## 0.3 — More Reference Packs
 
-## v0.3 — Example Packs
+- [ ] E-commerce/marketplace documentation pack
+- [ ] Portfolio and personal-site pack
+- [ ] Mobile application pack
+- [ ] Open-source CLI/library pack
+- [ ] Data/analytics project pack
 
-- [x] SaaS CRM full pack
-- [x] AI agent full pack
-- [ ] Portfolio full pack
-- [ ] E-commerce full pack
+## 0.4 — Automation
 
-## v0.4 — Documentation Website
+- [ ] Template manifest and machine-readable metadata
+- [ ] Interactive project questionnaire
+- [ ] CLI to generate selected document tracks
+- [ ] Cross-document terminology and link checks
+- [ ] Documentation completeness report
+- [ ] Export bundles for popular AI coding agents
 
-- [ ] Add docs site structure
-- [ ] Add navigation
-- [ ] Add template preview pages
+## 0.5 — Documentation Experience
 
-## v0.5 — Generator Ideas
+- [ ] Searchable documentation website
+- [ ] Template previews and copy/download actions
+- [ ] Decision and requirement traceability guide
+- [ ] Community showcase of projects using BeforeCode
+- [ ] Localization framework
 
-- [ ] Add CLI concept
-- [ ] Add project question flow
-- [ ] Add generated docs output plan
+## 1.0 — Stable Planning System
+
+- [ ] Stable template contracts and versioning policy
+- [ ] Upgrade/migration guide for template changes
+- [ ] Complete core example coverage
+- [ ] Automated release process
+- [ ] Maintainer and governance model
+
+## Contributing to the Roadmap
+
+Open a proposal describing the user problem, intended project types, why existing files are insufficient, and the smallest useful addition. See [CONTRIBUTING.md](../CONTRIBUTING.md).
