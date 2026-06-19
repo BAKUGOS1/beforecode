@@ -1,0 +1,38 @@
+{
+  "name": "beforecode",
+  "version": "0.1.0",
+  "description": "Spec-first project planning toolkit for humans and AI coding agents.",
+  "type": "module",
+  "bin": {
+    "beforecode": "./bin/beforecode.js"
+  },
+  "scripts": {
+    "cli": "node ./bin/beforecode.js",
+    "test": "node --test",
+    "test:cli": "node ./bin/beforecode.js help && node ./bin/beforecode.js list"
+  },
+  "files": [
+    "bin",
+    "src",
+    "templates",
+    "checklists",
+    "prompts",
+    "docs/cli-usage.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "prd",
+    "documentation",
+    "project-planning",
+    "software-architecture",
+    "ai-coding",
+    "qa",
+    "cli"
+  ],
+  "author": "Mohit Kumar",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
