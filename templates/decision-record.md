@@ -1,25 +1,56 @@
-# Decision Record
+# Decision Record: Title
 
-## Title
-
-Write the decision title.
-
-## Status
-
-Proposed, accepted, rejected, or replaced.
+| Field | Value |
+|---|---|
+| ID | ADR-001 |
+| Status | Proposed / Accepted / Rejected / Superseded |
+| Date | YYYY-MM-DD |
+| Owners |  |
+| Supersedes |  |
+| Superseded by |  |
 
 ## Context
 
-Why is this decision needed?
+Describe the decision pressure, constraints, requirements, assumptions, and what happens if no decision is made.
+
+## Decision Drivers
+
+- Required capabilities
+- Quality attributes
+- Cost and schedule
+- Team skills and operational constraints
+- Security, privacy, and compliance
+
+## Considered Options
+
+### Option A
+
+Description, benefits, drawbacks, risks, cost, and operational impact.
+
+### Option B
+
+Description, benefits, drawbacks, risks, cost, and operational impact.
 
 ## Decision
 
-What was decided?
+State the selected option precisely and the scope of the decision.
 
-## Options
+## Rationale
 
-List other options.
+Explain why it best satisfies the drivers and why alternatives were not selected.
 
-## Impact
+## Consequences
 
-Describe tradeoffs and follow-up work.
+### Positive
+
+### Negative and trade-offs
+
+### Follow-up work
+
+## Validation and Revisit Triggers
+
+Define how the decision will be validated and what scale, cost, failure, policy, or product change should trigger reconsideration.
+
+## References
+
+Link requirements, benchmarks, prototypes, incidents, standards, and related records.
