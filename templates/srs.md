@@ -1,35 +1,73 @@
 # Software Requirements Specification
 
-## 1. Purpose
+## 1. Purpose and Scope
 
-Describe the purpose of this specification.
+Define the system, intended audience, release boundary, and relationship to the PRD/BRD.
 
-## 2. Product Scope
+## 2. Definitions and References
 
-Describe what the software will do.
+List domain terms, acronyms, standards, and source documents.
 
-## 3. User Classes
+## 3. Product Context
 
-List user types and their needs.
+Describe users, operating environment, external systems, constraints, assumptions, and dependencies.
 
-## 4. Functional Requirements
+## 4. User Classes
 
-| ID | Requirement | Priority |
-|---|---|---|
-| FR-001 |  |  |
+| User class | Responsibilities | Skill/context | Access |
+|---|---|---|---|
+|  |  |  |  |
 
-## 5. Data Requirements
+## 5. Functional Requirements
 
-Describe required data and storage rules.
+### FR-001 — Requirement name
 
-## 6. Interface Requirements
+- Description:
+- Actors:
+- Preconditions:
+- Inputs:
+- Processing/business rules:
+- Outputs:
+- Errors/exceptions:
+- Permissions:
+- Acceptance criteria:
 
-Describe UI, API, and integration needs.
+## 6. External Interface Requirements
 
-## 7. Constraints
+### User interfaces
 
-List technical, business, and operational constraints.
+### APIs and software integrations
 
-## 8. Acceptance Criteria
+### Hardware/device interfaces
 
-Define completion rules.
+### Communication protocols
+
+## 7. Data Requirements
+
+Define entities, validation, ownership, privacy classification, retention, migration, audit, backup, and deletion.
+
+## 8. Non-Functional Requirements
+
+| ID | Category | Requirement | Measurement |
+|---|---|---|---|
+| NFR-001 | Performance |  |  |
+
+Cover security, reliability, availability, accessibility, compatibility, maintainability, observability, and scalability.
+
+## 9. State and Lifecycle Rules
+
+Define valid statuses, transitions, who may trigger them, and illegal transition behavior.
+
+## 10. Constraints and Assumptions
+
+Include technical, legal, operational, contractual, platform, and schedule constraints.
+
+## 11. Verification Matrix
+
+| Requirement | Verification method | Test/reference | Status |
+|---|---|---|---|
+| FR-001 | Test / inspection / analysis |  |  |
+
+## 12. Approval and Change Control
+
+Record approvers and how requirement changes are proposed, reviewed, versioned, and traced.
