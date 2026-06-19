@@ -1,71 +1,101 @@
 # CLI Usage
 
-BeforeCode CLI generates project documentation inside an existing or new software project.
+BeforeCode CLI generates project documentation inside an existing or new software project. It requires Node.js 18 or later.
 
-## Local usage from the repository
+## Install From GitHub
+
+Until the package is published to npm, install the current stable code directly from `main`:
 
 ```bash
+npm install --save-dev github:BAKUGOS1/beforecode#main
+```
+
+Then run:
+
+```bash
+npx beforecode help
+npx beforecode list
+```
+
+This keeps BeforeCode project-local and records it in `devDependencies`.
+
+## One-Time Use Without Keeping the Dependency
+
+```bash
+npm install --no-save github:BAKUGOS1/beforecode#main
+npx beforecode init --type saas --name "My Project"
+```
+
+## Local Usage From a Repository Clone
+
+```bash
+git clone https://github.com/BAKUGOS1/beforecode.git
+cd beforecode
 npm install
 node ./bin/beforecode.js help
 node ./bin/beforecode.js list
 ```
 
-## Generate a docs set
+## Generate a Documentation Set
+
+Run inside the target project:
 
 ```bash
-beforecode init --type saas
+npx beforecode init --type saas --name "My SaaS"
 ```
 
 Use a custom docs folder:
 
 ```bash
-beforecode init --type ai-agent --docs project-docs
+npx beforecode init --type ai-agent --name "Task Agent" --docs project-docs
 ```
 
 Preview without writing files:
 
 ```bash
-beforecode init --type saas --dry-run
+npx beforecode init --type saas --dry-run
 ```
 
 Replace existing generated files intentionally:
 
 ```bash
-beforecode init --type saas --force
+npx beforecode init --type saas --force
 ```
 
-## Add one template
+The CLI does not overwrite files by default. Review generated documents before using `--force`.
+
+## Add One Template
 
 ```bash
-beforecode add prd
-beforecode add api-documentation
-beforecode add qa-test-plan
+npx beforecode add prd
+npx beforecode add api-documentation
+npx beforecode add qa-test-plan
 ```
 
-## Check readiness
+## Check Readiness
 
 ```bash
-beforecode check --type saas
+npx beforecode check --type saas
 ```
 
-If `.beforecoderc.json` exists, the CLI can read the project type and docs path automatically:
+If `.beforecoderc.json` exists, the CLI reads the project type and docs path automatically:
 
 ```bash
-beforecode check
+npx beforecode check
 ```
 
-## Score readiness
+## Score Readiness
 
 ```bash
-beforecode score --type saas
+npx beforecode score --type saas
 ```
 
-The MVP score is based on whether required files exist. Later versions can inspect sections and traceability.
+The MVP score checks whether the recommended documents exist. It does not yet grade document quality or requirement traceability.
 
-## Generate AI handoff files
+## Generate AI Handoff Files
 
 ```bash
-beforecode handoff
+npx beforecode handoff --name "My Project"
 ```
 
 This creates:
@@ -75,17 +105,38 @@ AGENTS.md
 docs/ai-handoff.md
 ```
 
-## Supported project types
+Existing files are preserved unless `--force` is supplied.
 
-- small
-- portfolio
-- saas
-- crm
-- ecommerce
-- mobile
-- ai-agent
-- opensource
+## Supported Project Types
 
-## Safe behavior
+- `small`
+- `portfolio`
+- `saas`
+- `crm`
+- `ecommerce`
+- `mobile`
+- `ai-agent`
+- `opensource`
 
-The CLI does not overwrite files by default. Use `--force` only when replacing existing generated files is intentional.
+## Update BeforeCode
+
+```bash
+npm install --save-dev github:BAKUGOS1/beforecode#main
+```
+
+## Remove BeforeCode
+
+```bash
+npm uninstall beforecode
+```
+
+Generated documentation remains in the project after uninstalling the CLI.
+
+## Future npm Installation
+
+After the package is published to npm, the planned installation will be:
+
+```bash
+npm install --save-dev beforecode
+npx beforecode init --type saas
+```
