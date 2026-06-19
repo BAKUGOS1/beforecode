@@ -1,55 +1,72 @@
 # Implementation Plan
 
-## Goal
+## 1. Delivery Goal
 
-Describe what will be built in this phase.
+Describe the release outcome and link approved source-of-truth documents.
 
-## Inputs
+## 2. Preconditions
 
-List the documents used for implementation.
+List decisions, environments, credentials, designs, migrations, dependencies, and approvals required before work begins.
 
-- Project Brief
-- PRD
-- TRD
-- Database Schema
-- API Documentation
-- QA Test Plan
+## 3. Delivery Strategy
 
-## Phases
+Explain vertical slices, sequencing, feature flags, migration approach, parallel work, and how usable increments will be demonstrated.
 
-### Phase 1: Foundation
+## 4. Phases
 
-- Setup project structure
-- Add base configuration
-- Add shared components or utilities
+### Phase 0 — Foundation
 
-### Phase 2: Core features
+**Outcome:**  
+**Dependencies:**  
+**Tasks:**  
+**Verification:**  
+**Exit criteria:**
 
-- Build main screens
-- Add core data flows
-- Add forms and validation
+Repeat this structure for each phase. Prefer phases that deliver testable behavior instead of only frontend/backend layers.
 
-### Phase 3: Data and API
+## 5. Dependency Map
 
-- Add database tables
-- Add API routes
-- Connect frontend and backend
+```text
+Foundation → Identity/access → Core workflow → Integrations → Hardening → Release
+```
 
-### Phase 4: Review
+Identify the critical path and work that can run safely in parallel.
 
-- Run checklist
-- Fix missing states
-- Update README
+## 6. Milestones
 
-## Task Table
+| Milestone | Deliverable | Owner | Target | Acceptance evidence |
+|---|---|---|---|---|
+|  |  |  |  |  |
 
-| Task | Priority | Status |
-|---|---|---|
-|  |  |  |
+## 7. Task Backlog
 
-## Completion Rules
+| ID | Requirement | Task | Dependency | Owner | Estimate | Status |
+|---|---|---|---|---|---|---|
+| IMP-001 | FR-001 |  |  |  |  | Not started |
 
-- Scope is complete
-- Main flows work
-- QA checks pass
-- Documentation is updated
+## 8. Testing and Review Gates
+
+Define required code review, design review, migration review, automated tests, manual QA, security checks, and performance checks for each phase.
+
+## 9. Data and Migration Work
+
+List schema changes, backfills, compatibility windows, test data, rollback/forward-fix, and verification queries.
+
+## 10. Release Plan
+
+Describe staging validation, feature flags, rollout percentage, monitoring, support readiness, communication, and rollback triggers.
+
+## 11. Risks and Contingencies
+
+| Risk | Signal | Prevention | Contingency | Owner |
+|---|---|---|---|---|
+|  |  |  |  |  |
+
+## Definition of Done
+
+- Requirement and acceptance criteria are satisfied
+- Permission, loading, empty, error, and recovery states are handled
+- Tests and observability are included
+- Security and data constraints are enforced server-side
+- Documentation, migrations, and release notes are updated
+- No unresolved release-blocking defect remains
