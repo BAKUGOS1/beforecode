@@ -14,16 +14,16 @@
 
 ## v0.2 — Template Expansion
 
-- [ ] Expand implementation plan template
-- [ ] Expand deployment plan template
-- [ ] Expand UI system template
+- [x] Expand implementation plan template
+- [x] Expand deployment plan template
+- [x] Expand UI system template
 - [ ] Expand API readiness checklist
 - [ ] Add release checklist details
-- [ ] Add complete SaaS CRM example
+- [x] Add complete SaaS CRM example
 
 ## v0.3 — Example Packs
 
-- [ ] SaaS CRM full pack
+- [x] SaaS CRM full pack
 - [ ] AI agent full pack
 - [ ] Portfolio full pack
 - [ ] E-commerce full pack
