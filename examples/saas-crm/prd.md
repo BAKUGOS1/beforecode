@@ -1,0 +1,3 @@
+# MiniCRM PRD
+
+Draft example.
