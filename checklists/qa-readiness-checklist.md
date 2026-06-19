@@ -1,20 +1,36 @@
 # QA Readiness Checklist
 
-## Test planning
+## Requirements and Build
 
-- [ ] Modules are listed
-- [ ] Core workflows are listed
-- [ ] Edge cases are listed
-- [ ] Regression areas are listed
+- [ ] Testable build and version are available
+- [ ] Requirements and acceptance criteria are approved and traceable
+- [ ] Known limitations and changed areas are documented
+- [ ] Critical workflows and release risks are prioritized
 
-## Test data
+## Environment and Data
 
-- [ ] Valid data is prepared
-- [ ] Invalid data is prepared
-- [ ] Empty-state data is prepared
+- [ ] Test environment matches required production behavior
+- [ ] Roles, accounts, integrations, devices, and browsers are available
+- [ ] Valid, invalid, empty, boundary, duplicate, and high-volume data exist
+- [ ] Test data is isolated, non-sensitive, and resettable
 
-## Release readiness
+## Coverage
 
-- [ ] High priority issues are resolved
-- [ ] Main flows are verified
-- [ ] README is updated
+- [ ] Functional, permission, validation, error, and recovery cases are included
+- [ ] Integration, API contract, migration, and regression coverage exists
+- [ ] Security, accessibility, performance, and compatibility targets are testable
+- [ ] Concurrent, stale-state, duplicate-action, and interruption cases are covered
+- [ ] Critical automated tests run in CI
+
+## Defect and Evidence Process
+
+- [ ] Severity, priority, triage, retest, and reopen rules are defined
+- [ ] Evidence format includes build, role, data, request ID, and screenshots/logs
+- [ ] Release-blocking criteria and accepted-risk authority are explicit
+- [ ] Final test summary owner and storage location are known
+
+## Entry Decision
+
+- [ ] Blocking dependencies are operational
+- [ ] QA owner accepts remaining environment limitations
+- [ ] Testing can begin without guessing expected behavior
