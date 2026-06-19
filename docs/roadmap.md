@@ -16,6 +16,8 @@ The roadmap describes direction, not a guaranteed schedule. Contributions and re
 - [x] Add readiness check and score commands
 - [x] Add AI handoff generation
 - [x] Add CLI tests on direct `main` updates
+- [x] Verify packed CLI installation in a clean consumer project
+- [x] Add a protected, provenance-ready release workflow
 
 ## 0.3 — More Reference Packs
 
@@ -32,7 +34,7 @@ The roadmap describes direction, not a guaranteed schedule. Contributions and re
 - [ ] Section-level document quality checks
 - [ ] Requirement traceability and cross-document terminology checks
 - [ ] Export profiles for popular AI coding agents
-- [ ] npm publishing and release automation
+- [ ] Complete the first npm publication and trusted-publisher setup
 
 ## 0.5 — Documentation Experience
 
@@ -47,7 +49,7 @@ The roadmap describes direction, not a guaranteed schedule. Contributions and re
 - [ ] Stable CLI and template contracts
 - [ ] Versioned template packs and upgrade guide
 - [ ] Complete core example coverage
-- [ ] Automated release process
+- [ ] Automated release lifecycle after protected approval
 - [ ] Maintainer and governance model
 
 ## Contributing to the Roadmap
