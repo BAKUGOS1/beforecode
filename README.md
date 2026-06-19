@@ -4,7 +4,7 @@
 
 # BeforeCode
 
-### Plan first. Build with confidence.
+**Plan first. Build with confidence.**
 
 **A spec-first software planning toolkit for humans and AI coding agents.**
 
