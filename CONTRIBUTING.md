@@ -2,23 +2,36 @@
 
 Thank you for helping make software planning clearer and more useful.
 
-## Ways to contribute
+## Repository Workflow
+
+The maintainer uses a lightweight trunk-based workflow:
+
+- `main` is the single maintained branch and must remain usable
+- Small, reviewed, independently verifiable changes may be committed directly to `main`
+- Run the relevant checks before considering a direct-main change complete
+- Keep each commit focused and use a clear conventional-style message
+- Do not leave temporary feature branches after work is integrated
+- Use a temporary branch only when GitHub requires one for an external contribution or when an unusually risky change needs isolated review
+
+External contributors should normally fork the repository and open a focused pull request because they cannot write directly to `main`.
+
+## Ways to Contribute
 
 - Improve an existing template or checklist
 - Add a complete, realistic example pack
 - Strengthen acceptance criteria, edge cases, or security coverage
-- Improve guides and AI prompts
+- Improve guides, CLI behavior, and AI prompts
 - Report broken links, inconsistencies, or unclear wording
 - Propose a new project-specific documentation track
 
-## Before opening a change
+## Before Opening a Change
 
-1. Search existing issues and pull requests.
-2. Open an issue for major structure, naming, or scope changes.
-3. Keep one pull request focused on one logical improvement.
+1. Search existing files, issues, and pull requests.
+2. Open an issue for major structure, naming, CLI contract, or scope changes.
+3. Keep one commit or pull request focused on one logical improvement.
 4. Do not include confidential project information or copied proprietary documents.
 
-## Content standards
+## Content Standards
 
 A contribution should be:
 
@@ -30,7 +43,7 @@ A contribution should be:
 - Free of unexplained placeholders, fake claims, and promotional links
 - Original or legally reusable with attribution where required
 
-## Template standard
+## Template Standard
 
 Strong templates normally include:
 
@@ -41,7 +54,7 @@ Strong templates normally include:
 - Acceptance, risk, edge-case, or verification guidance
 - Completion criteria
 
-## Example-pack standard
+## Example-Pack Standard
 
 A new example pack should contain a `README.md`, use one consistent product, and keep names, roles, IDs, requirements, architecture, data, API, and QA rules aligned across documents.
 
@@ -58,7 +71,18 @@ implementation-plan.md
 README.md
 ```
 
-## File and style rules
+## CLI Change Standard
+
+CLI changes should:
+
+- Preserve files by default
+- Keep `--force` and `--dry-run` behavior predictable
+- Support Node.js 18 or later
+- Include or update automated tests
+- Keep `package.json`, help output, usage docs, and version references aligned
+- Pass `npm test` and relevant command smoke tests
+
+## File and Style Rules
 
 - Use lowercase hyphen-separated filenames
 - Use ATX headings (`#`, `##`, `###`)
@@ -68,26 +92,36 @@ README.md
 - Keep tables readable in raw Markdown
 - Avoid decorative formatting that reduces scanability
 
-## Pull request process
+## Required Checks
 
-1. Create a descriptive branch such as `docs/improve-prd-template`.
-2. Update related indexes when adding or renaming files.
-3. Check internal links and cross-document consistency.
-4. Complete the pull request checklist.
-5. Respond to review feedback and keep discussion respectful.
+Documentation changes:
 
-## Commit examples
+```bash
+# GitHub Actions runs markdownlint on affected Markdown files
+```
+
+CLI changes:
+
+```bash
+npm test
+node ./bin/beforecode.js help
+node ./bin/beforecode.js list
+```
+
+## Commit Examples
 
 ```text
 docs: improve getting started workflow
 template: add threat model template
 checklist: expand API readiness checks
 example: add e-commerce documentation pack
+feat(cli): add interactive project selection
+fix(cli): preserve config during template add
 fix: correct broken relative links
 ```
 
-## Review criteria
+## Review Criteria
 
-Maintainers review usefulness, correctness, consistency, clarity, maintainability, originality, and fit with BeforeCode's scope.
+Maintainers review usefulness, correctness, consistency, clarity, maintainability, originality, safety, and fit with BeforeCode's scope.
 
 By participating, you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md). For security concerns, use [SECURITY.md](SECURITY.md) instead of a public issue.
