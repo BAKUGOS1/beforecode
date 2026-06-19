@@ -2,6 +2,17 @@
 
 This runbook covers validation, first publication, and later releases of the BeforeCode npm package.
 
+## Package Identity
+
+The public package name is the unscoped name `beforecode`.
+
+- Install name: `beforecode`
+- CLI command: `beforecode`
+- Initial npm owner: user `bakugos1`
+- Source repository: `BAKUGOS1/beforecode`
+
+The npm organization named `beforecode` does not reserve or own the unscoped package. It is relevant only to scoped package names such as `@beforecode/example`. Do not change `package.json` to `@beforecode/beforecode` unless the project intentionally adopts a scoped package in a future breaking distribution change.
+
 ## Release Principles
 
 - `package.json` is the version source of truth.
@@ -12,16 +23,17 @@ This runbook covers validation, first publication, and later releases of the Bef
 
 ## Before the First npm Publish
 
-1. Confirm that the intended package name is available on npm.
-2. Confirm the npm account or organization that will own the package.
-3. Enable two-factor authentication on the npm account.
+1. Confirm that the exact unscoped package name `beforecode` is available on npm immediately before publishing.
+2. Confirm that npm user `bakugos1` will own the first release.
+3. Enable two-factor authentication on the `bakugos1` npm account.
 4. Create a protected GitHub environment named `npm`.
 5. Add required reviewers to that environment.
-6. For the first publish, add a granular npm token as the `NPM_TOKEN` environment secret.
-7. After the package exists, configure npm trusted publishing for this repository and `.github/workflows/release.yml`.
-8. Remove the long-lived token when trusted publishing works.
+6. For the first publish, create a granular npm token restricted to the `beforecode` package when npm allows that selection, with the minimum publish permissions and a short expiry.
+7. Add the token as the `NPM_TOKEN` secret on the GitHub `npm` environment, not as a repository file or plain repository secret.
+8. After the package exists, configure npm trusted publishing for repository `BAKUGOS1/beforecode` and workflow `.github/workflows/release.yml`.
+9. Remove the long-lived token when trusted publishing works.
 
-Do not place npm credentials in repository files, command examples, issues, or workflow logs.
+Do not place npm credentials in repository files, command examples, issues, chat messages, screenshots, or workflow logs.
 
 ## Validate a Candidate
 
