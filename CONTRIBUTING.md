@@ -101,7 +101,11 @@ CLI changes should:
 - Support Node.js 18 or later
 - Include or update automated tests
 - Keep `package.json`, help output, README, usage docs, and version references aligned
-- Pass `npm test` and relevant command smoke tests
+- Pass tests, package verification, and relevant command smoke tests
+
+## Release Change Standard
+
+Release-related changes must keep publishing manual and protected, avoid committing credentials, validate the packed artifact in a clean project, and follow [docs/releasing.md](docs/releasing.md).
 
 ## File and Style Rules
 
@@ -121,6 +125,7 @@ CLI changes should also pass:
 
 ```bash
 npm test
+npm run verify:package
 node ./bin/beforecode.js help
 node ./bin/beforecode.js list
 ```
@@ -134,6 +139,7 @@ checklist: expand API readiness checks
 example: add e-commerce documentation pack
 feat(cli): add interactive project selection
 fix(cli): preserve config during template add
+build: prepare package release validation
 fix: correct broken relative links
 ```
 
