@@ -24,7 +24,7 @@
 ## v0.3 — Example Packs
 
 - [x] SaaS CRM full pack
-- [ ] AI agent full pack
+- [x] AI agent full pack
 - [ ] Portfolio full pack
 - [ ] E-commerce full pack
 
