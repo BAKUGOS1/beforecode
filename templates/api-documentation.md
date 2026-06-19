@@ -2,62 +2,112 @@
 
 ## 1. API Overview
 
-Describe the API purpose and base URL.
+| Field | Value |
+|---|---|
+| Base URL |  |
+| Version |  |
+| Protocol/format | REST/JSON, GraphQL, RPC, events |
+| Authentication |  |
+| Owner |  |
 
-## 2. Endpoint Format
+Describe audience, trust boundary, stability, and compatibility policy.
 
-Use this structure for every endpoint.
+## 2. Conventions
 
-### Endpoint Name
+Define naming, identifiers, timestamps, money, nullable fields, envelopes, request IDs, idempotency keys, and content limits.
 
-```text
-GET /api/resource
-```
+## 3. Authentication and Authorization
 
-### Purpose
+Document credential type, token lifetime, scopes/roles, tenant resolution, resource ownership, and forbidden behavior. UI hiding is not authorization.
 
-Describe what this endpoint does.
-
-### Request Body
+## 4. Standard Errors
 
 ```json
 {
-  "name": "Example"
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "The request contains invalid fields.",
+    "requestId": "req_123",
+    "fields": {}
+  }
 }
 ```
 
-### Success Response
+| Code | HTTP status | Retryable | Meaning |
+|---|---:|---:|---|
+| VALIDATION_ERROR | 400 | No | Invalid input |
+| UNAUTHENTICATED | 401 | No | Missing/invalid identity |
+| FORBIDDEN | 403 | No | Permission denied |
+| NOT_FOUND | 404 | No | Resource unavailable |
+| CONFLICT | 409 | Maybe | Duplicate or stale state |
+| RATE_LIMITED | 429 | Yes | Limit exceeded |
+| INTERNAL_ERROR | 500 | Maybe | Unexpected failure |
+
+## 5. Pagination, Filtering, and Sorting
+
+Define cursor/offset behavior, defaults, maximum page size, stable ordering, allowed filters, search semantics, and invalid-field handling.
+
+## 6. Endpoint Catalog
+
+| Method | Path | Purpose | Permission |
+|---|---|---|---|
+| GET | `/resources` | List resources |  |
+
+## 7. Endpoint Template
+
+### Endpoint name
+
+```http
+POST /api/v1/resources
+```
+
+**Purpose:**  
+**Permission:**  
+**Idempotency:**  
+**Rate limit:**
+
+Path/query parameters:
+
+| Name | Type | Required | Rules |
+|---|---|---:|---|
+|  |  |  |  |
+
+Request:
+
+```json
+{}
+```
+
+Success response:
 
 ```json
 {
-  "success": true,
   "data": {}
 }
 ```
 
-### Error Response
+Errors and edge cases:
 
-```json
-{
-  "success": false,
-  "message": "Something went wrong"
-}
-```
+| Condition | Status/code | Client action |
+|---|---|---|
+|  |  |  |
 
-## 3. Pagination
+## 8. Webhooks and Events
 
-Define page, limit, cursor, or offset rules.
+Define event names, payload versioning, signature verification, retries, ordering, duplicates, replay, and dead-letter behavior.
 
-## 4. Filtering and Sorting
+## 9. Security and Data Handling
 
-Define available filters and sort fields.
+Document validation, output encoding, secret handling, sensitive fields, audit, CORS/origins, file uploads, SSRF controls, and abuse/rate protections.
 
-## 5. Status Codes
+## 10. Versioning and Deprecation
 
-| Code | Meaning |
-|---|---|
-| 200 | Success |
-| 201 | Created |
-| 400 | Invalid request |
-| 404 | Not found |
-| 500 | Server error |
+Define breaking changes, notice period, migration guide, sunset headers, and supported versions.
+
+## API Acceptance
+
+- Contracts match product, database, and permission documents
+- Every endpoint has authorization and error behavior
+- Retries and side effects are safe
+- Pagination and compatibility are deterministic
+- Examples pass contract tests or schema validation
