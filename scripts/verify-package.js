@@ -1,5 +1,12 @@
 import { execFileSync } from "node:child_process";
-import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import {
+  existsSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  rmSync,
+  writeFileSync
+} from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -34,15 +41,11 @@ try {
   }
 
   const consumer = join(workspace, "consumer");
+  mkdirSync(consumer, { recursive: true });
   writeFileSync(
-    join(workspace, "consumer-package.json"),
-    JSON.stringify({ name: "beforecode-package-verification", private: true }, null, 2)
+    join(consumer, "package.json"),
+    `${JSON.stringify({ name: "beforecode-package-verification", private: true }, null, 2)}\n`
   );
-  execFileSync(process.execPath, ["-e", `
-    const fs = require("node:fs");
-    fs.mkdirSync(${JSON.stringify(consumer)}, { recursive: true });
-    fs.copyFileSync(${JSON.stringify(join(workspace, "consumer-package.json"))}, ${JSON.stringify(join(consumer, "package.json"))});
-  `]);
 
   const tarball = join(workspace, packResult.filename);
   execFileSync(
