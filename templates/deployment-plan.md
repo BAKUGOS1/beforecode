@@ -1,40 +1,63 @@
 # Deployment Plan
 
-## Environments
+## 1. Release Overview
 
-List project environments.
+| Field | Value |
+|---|---|
+| Release/version |  |
+| Owner |  |
+| Window |  |
+| Risk level |  |
+| Rollback authority |  |
 
-- Local
-- Staging
-- Production
+Describe user impact and major changes.
 
-## Hosting
+## 2. Environments
 
-Write hosting provider and deployment target.
+| Environment | Purpose | Data policy | Access | Deployment source |
+|---|---|---|---|---|
+| Local |  |  |  |  |
+| Staging |  |  |  |  |
+| Production |  |  |  |  |
 
-## Configuration
+## 3. Preconditions
 
-List required configuration values.
+- CI and required reviews pass
+- Release artifact/version is immutable
+- Secrets and configuration are verified
+- Backup/restore and migration plans are reviewed
+- Support, monitoring, and communication are ready
 
-| Name | Purpose | Required |
-|---|---|---|
-|  |  |  |
+## 4. Configuration and Secrets
 
-## Release Steps
+List variable name, owner, environment, source, rotation, and whether it is required. Never include secret values.
 
-1. Review scope
-2. Run QA checklist
-3. Update README
-4. Deploy
-5. Verify release
+## 5. Database and Data Migration
 
-## Rollback Plan
+Define migration order, compatibility window, backup, lock/downtime risk, backfill, verification queries, and forward-fix/rollback.
 
-Write what to do if the release has a serious issue.
+## 6. Deployment Steps
 
-## Post-release Checks
+| Step | Action | Owner | Expected evidence | Stop condition |
+|---:|---|---|---|---|
+| 1 |  |  |  |  |
 
-- Main pages work
-- Login flow works if applicable
-- Important data flows work
-- Error pages are handled
+## 7. Rollout Strategy
+
+Describe feature flags, canary/staged percentage, tenant/user targeting, duration, and promotion criteria.
+
+## 8. Verification
+
+Cover health checks, authentication, critical workflows, permissions, integrations, data integrity, logs, metrics, and performance.
+
+## 9. Rollback
+
+Define triggers, decision owner, application rollback, database response, configuration rollback, user communication, and post-rollback checks.
+
+## 10. Monitoring and Incident Response
+
+List dashboards, alerts, thresholds, on-call owner, incident channel, and correlation identifiers.
+
+## 11. Completion
+
+Record deployment time, version, verification evidence, incidents, accepted risks, and follow-up actions.
