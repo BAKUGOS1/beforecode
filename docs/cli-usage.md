@@ -1,24 +1,37 @@
 # CLI Usage
 
-## Install locally from the repository
+BeforeCode CLI generates project documentation inside an existing or new software project.
+
+## Local usage from the repository
 
 ```bash
 npm install
 node ./bin/beforecode.js help
+node ./bin/beforecode.js list
 ```
 
-## Generate docs for a SaaS project
+## Generate a docs set
 
 ```bash
 beforecode init --type saas
 ```
 
-This creates a `docs/` folder with the recommended SaaS documentation set.
-
-## Generate docs in a custom folder
+Use a custom docs folder:
 
 ```bash
 beforecode init --type ai-agent --docs project-docs
+```
+
+Preview without writing files:
+
+```bash
+beforecode init --type saas --dry-run
+```
+
+Replace existing generated files intentionally:
+
+```bash
+beforecode init --type saas --force
 ```
 
 ## Add one template
@@ -35,16 +48,31 @@ beforecode add qa-test-plan
 beforecode check --type saas
 ```
 
+If `.beforecoderc.json` exists, the CLI can read the project type and docs path automatically:
+
+```bash
+beforecode check
+```
+
 ## Score readiness
 
 ```bash
 beforecode score --type saas
 ```
 
-## List options
+The MVP score is based on whether required files exist. Later versions can inspect sections and traceability.
+
+## Generate AI handoff files
 
 ```bash
-beforecode list
+beforecode handoff
+```
+
+This creates:
+
+```text
+AGENTS.md
+docs/ai-handoff.md
 ```
 
 ## Supported project types
@@ -53,9 +81,11 @@ beforecode list
 - portfolio
 - saas
 - crm
+- ecommerce
+- mobile
 - ai-agent
 - opensource
 
-## Notes
+## Safe behavior
 
-The CLI does not overwrite files by default. Use `--force` only when you intentionally want to replace existing generated files.
+The CLI does not overwrite files by default. Use `--force` only when replacing existing generated files is intentional.

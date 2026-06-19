@@ -7,9 +7,9 @@
     "beforecode": "./bin/beforecode.js"
   },
   "scripts": {
-    "start": "node ./bin/beforecode.js",
-    "check": "node ./bin/beforecode.js check",
-    "score": "node ./bin/beforecode.js score"
+    "cli": "node ./bin/beforecode.js",
+    "test": "node --test",
+    "test:cli": "node ./bin/beforecode.js help && node ./bin/beforecode.js list"
   },
   "files": [
     "bin",
@@ -27,7 +27,8 @@
     "project-planning",
     "software-architecture",
     "ai-coding",
-    "qa"
+    "qa",
+    "cli"
   ],
   "author": "Mohit Kumar",
   "license": "MIT",
