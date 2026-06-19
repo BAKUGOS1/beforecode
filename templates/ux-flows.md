@@ -1,37 +1,70 @@
 # UX Flows
 
-## 1. Main User Journey
+## 1. Experience Objective
 
-Describe the main path a user follows.
+State the user outcome, primary persona, platform, and usability constraints.
 
-## 2. Entry Points
+## 2. Information Architecture
 
-Where does the user start?
+Describe navigation hierarchy, primary objects, routes/screens, global actions, and entry points.
 
-## 3. Navigation
+## 3. Critical Journey Catalog
 
-Describe main navigation and page structure.
+| Journey | Persona | Trigger | Success outcome | Priority |
+|---|---|---|---|---|
+|  |  |  |  |  |
 
-## 4. Flow Diagrams
+## 4. Flow Template
 
-Use simple text diagrams.
+### Flow name
+
+**Goal:**  
+**Actor:**  
+**Entry points:**  
+**Preconditions:**  
+**Permissions:**
 
 ```text
-Start → Page → Action → Result
+Start → Input → Validation → Decision → Action → Confirmation
+                         └→ Error → Recovery
 ```
 
-## 5. Empty States
+| Step | Screen/state | User action | System response | Analytics |
+|---:|---|---|---|---|
+| 1 |  |  |  |  |
 
-Describe what users see when no data exists.
+Alternative and failure paths:
 
-## 6. Error States
+- Validation failure
+- Permission denied
+- Empty data
+- Network interruption
+- Duplicate action
+- Conflict/stale data
+- Cancel/back navigation
 
-Describe what users see when something fails.
+Completion criteria:
 
-## 7. Success States
+- User-visible success
+- Persisted system state
+- Next recommended action
 
-Describe confirmation and completion states.
+## 5. Cross-Cutting States
 
-## 8. Mobile Behavior
+Define loading, skeleton, empty, filtered-empty, error, offline, partial success, success, disabled, archived, and destructive confirmation states.
 
-Describe responsive behavior.
+## 6. Forms and Validation
+
+Define field order, defaults, required/optional fields, inline errors, server errors, data preservation, autosave, and duplicate submission behavior.
+
+## 7. Responsive Behavior
+
+Describe what reflows, collapses, scrolls, becomes a drawer, or changes priority on mobile/tablet/desktop.
+
+## 8. Accessibility
+
+Document keyboard path, focus management, labels, error announcement, contrast, touch targets, reduced motion, and non-color indicators.
+
+## 9. Open Questions and Handoff
+
+Link wireframes, prototypes, PRD requirements, API dependencies, analytics events, and unresolved design decisions.
