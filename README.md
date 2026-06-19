@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/beforecode-banner.svg" alt="BeforeCode — Plan first. Build with confidence." width="100%" />
+
 # BeforeCode
 
 ### Plan first. Build with confidence.
