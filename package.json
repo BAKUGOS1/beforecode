@@ -4,7 +4,7 @@
   "description": "Spec-first project planning toolkit and CLI for humans and AI coding agents.",
   "type": "module",
   "bin": {
-    "beforecode": "./bin/beforecode.js"
+    "beforecode": "bin/beforecode.js"
   },
   "scripts": {
     "cli": "node ./bin/beforecode.js",
@@ -47,9 +47,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
   }
 }
