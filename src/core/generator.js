@@ -4,10 +4,22 @@ import { ensureDir, exists, readText, writeText } from "../fs-utils.js";
 import { getProjectDocs, getProjectType } from "../data/project-types.js";
 import { getTemplateFile } from "../data/templates.js";
 import { writeConfig } from "./config.js";
+import { contextTemplateValues } from "./context.js";
 
-const VERSION = "0.1.0";
+const VERSION = "0.2.0";
 
-export async function initProject({ cwd, projectName, projectType, docsPath, force = false, dryRun = false }) {
+export async function initProject({
+  cwd,
+  projectName,
+  projectType,
+  docsPath,
+  force = false,
+  dryRun = false,
+  indexOffset = 0,
+  context = null,
+  additionalDocuments = [],
+  extraConfig = {}
+}) {
   const docs = getProjectDocs(projectType);
   const typeConfig = getProjectType(projectType);
 
@@ -21,7 +33,7 @@ export async function initProject({ cwd, projectName, projectType, docsPath, for
     return {
       templateName,
       file,
-      target: join(docsDir, numberedName(index + 1, file))
+      target: join(docsDir, numberedName(index + 1 + indexOffset, file))
     };
   });
 
@@ -53,7 +65,8 @@ export async function initProject({ cwd, projectName, projectType, docsPath, for
       projectName,
       projectType,
       docsPath,
-      templateName: item.templateName
+      templateName: item.templateName,
+      context
     });
 
     await writeText(item.target, content, { force: true });
@@ -66,7 +79,11 @@ export async function initProject({ cwd, projectName, projectType, docsPath, for
     docsPath,
     createdBy: "beforecode",
     version: VERSION,
-    documents: planned.map((item) => item.target.split(/[\\/]/).pop())
+    documents: [
+      ...additionalDocuments,
+      ...planned.map((item) => item.target.split(/[\\/]/).pop())
+    ],
+    ...extraConfig
   });
 
   return {
@@ -107,9 +124,20 @@ function numberedName(index, file) {
 }
 
 function renderTemplate(content, values) {
+  const contextValues = values.context ? contextTemplateValues(values.context) : {};
+
   return content
     .replaceAll("{{projectName}}", values.projectName)
     .replaceAll("{{projectType}}", values.projectType)
     .replaceAll("{{docsPath}}", values.docsPath)
-    .replaceAll("{{templateName}}", values.templateName);
+    .replaceAll("{{templateName}}", values.templateName)
+    .replaceAll("{{sourceContext}}", contextValues.sourceContext || "TBD")
+    .replaceAll("{{idea}}", contextValues.idea || "TBD")
+    .replaceAll("{{problem}}", contextValues.problem || "TBD")
+    .replaceAll("{{targetUsers}}", contextValues.targetUsers || "TBD")
+    .replaceAll("{{mvpFeatures}}", contextValues.mvpFeatures || "TBD")
+    .replaceAll("{{outOfScope}}", contextValues.outOfScope || "TBD")
+    .replaceAll("{{techPreferences}}", contextValues.techPreferences || "TBD")
+    .replaceAll("{{aiBuildMode}}", contextValues.aiBuildMode || "TBD")
+    .replaceAll("{{deadline}}", contextValues.deadline || "TBD");
 }
