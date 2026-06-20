@@ -62,6 +62,26 @@ beforecode score --type saas
 
 The MVP score is based on whether required files exist. Later versions can inspect sections and traceability.
 
+## Diagnose project health
+
+```bash
+beforecode doctor --type saas
+```
+
+If `.beforecoderc.json` exists, the command can infer the project type and docs path:
+
+```bash
+beforecode doctor
+```
+
+`doctor` audits:
+
+- Missing required documents for the selected project type.
+- Documents that still look shallow or placeholder-heavy.
+- Whether `.beforecoderc.json` exists.
+- Whether `AGENTS.md` and `docs/ai-handoff.md` exist.
+- Suggested next steps before implementation.
+
 ## Generate AI handoff files
 
 ```bash
