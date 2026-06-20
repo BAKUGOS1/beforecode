@@ -1,22 +1,32 @@
 <div align="center">
 
-# BeforeCode
+<img src="assets/beforecode-banner.svg" alt="BeforeCode — context-first planning toolkit" width="100%" />
 
-**Plan first. Build with confidence.**
-
-Spec-first project planning toolkit and CLI for humans and AI coding agents.
+<br />
 
 [![npm](https://img.shields.io/npm/v/beforecode?color=cb3837)](https://www.npmjs.com/package/beforecode)
 [![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-339933)](package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-111827)](LICENSE)
+[![CLI test](https://github.com/BAKUGOS1/beforecode/actions/workflows/cli-test.yml/badge.svg)](https://github.com/BAKUGOS1/beforecode/actions/workflows/cli-test.yml)
 
-[Install](#install) · [Workflow](#workflow) · [Commands](#commands) · [Project types](#project-types) · [Examples](#examples) · [References](docs/references.md)
+**Context-first project planning toolkit for humans and AI coding agents.**
+
+[Install](#install) · [Context-first flow](#context-first-flow) · [Commands](#commands) · [Project types](#project-types) · [Examples](#examples-and-references)
 
 </div>
 
 ---
 
-BeforeCode helps you turn an idea into a build-ready documentation system before implementation starts. It captures project context first, then generates connected Markdown documents for product requirements, UX, architecture, database, API, QA, deployment, and AI coding handoff.
+## Why BeforeCode?
+
+Most projects start coding too early. BeforeCode creates a planning workspace that captures the real idea first, asks for missing context, and then generates build-ready Markdown documentation.
+
+| Without BeforeCode | With BeforeCode |
+|---|---|
+| Random template docs | Context-aware docs |
+| AI agents guess missing details | Missing details become open questions |
+| PRD, TRD, QA drift apart | Docs share one source of truth |
+| Build starts before scope is clear | Build starts from reviewed context |
 
 ## Install
 
@@ -26,8 +36,6 @@ Recommended project setup:
 npm install --save-dev beforecode
 npx beforecode start
 ```
-
-`beforecode start` asks for your idea, target users, problem, MVP scope, out-of-scope items, technical preferences, and build mode before it creates docs.
 
 Use without installing:
 
@@ -47,22 +55,11 @@ Advanced quick-template mode:
 npx beforecode init --type saas --name "My App"
 ```
 
-## Workflow
+## Context-first flow
 
-```mermaid
-flowchart LR
-    Idea[Idea] --> Context[Project context]
-    Context --> Questions[Open questions]
-    Questions --> Requirements[Requirements]
-    Requirements --> UX[UX and permissions]
-    UX --> Architecture[Architecture]
-    Architecture --> Data[Database and API]
-    Data --> QA[QA readiness]
-    QA --> Build[Implementation]
-    Build --> Release[Release]
-```
+<img src="assets/context-first-workflow.svg" alt="BeforeCode context-first workflow" width="100%" />
 
-The documents are intentionally connected:
+`beforecode start` captures your idea, target users, problem, MVP scope, out-of-scope items, technical preferences, and build mode before creating docs.
 
 ```mermaid
 flowchart TD
@@ -98,7 +95,7 @@ npx beforecode score
 # Run a project health audit
 npx beforecode doctor
 
-# Generate AI coding agent handoff files
+# Generate AI coding handoff files
 npx beforecode handoff --name "My App"
 ```
 
@@ -118,6 +115,17 @@ your-project/
     └── ...
 ```
 
+## What it generates
+
+| Area | Output |
+|---|---|
+| Context | `00-project-context.md`, `.beforecoderc.json` |
+| Discovery | `01-open-questions.md`, research report, business requirements |
+| Product | PRD, SRS, release scope, UX flows, permission matrix |
+| Engineering | TRD, database schema, API documentation, implementation plan |
+| Quality | QA test plan, readiness scoring, doctor audit |
+| AI handoff | `AGENTS.md`, `docs/ai-handoff.md` |
+
 ## Commands
 
 | Command | Description |
@@ -128,7 +136,7 @@ your-project/
 | `beforecode add <template>` | Add a single template |
 | `beforecode check` | Check which docs exist |
 | `beforecode score` | Show readiness by category |
-| `beforecode doctor` | Audit missing docs, weak docs, config, and AI handoff readiness |
+| `beforecode doctor` | Audit missing docs, shallow docs, config, and handoff readiness |
 | `beforecode handoff` | Generate `AGENTS.md` and AI handoff docs |
 | `beforecode list` | Show project types and templates |
 
@@ -145,22 +153,13 @@ your-project/
 | `ai-agent` | Tool-using or autonomous AI agent |
 | `opensource` | Public library, CLI, or developer tool |
 
-## What is included
-
-- Context-first planning flow that avoids random demo docs.
-- 17 document templates: PRD, TRD, SRS, database schema, API docs, QA plan, release scope, and more.
-- Readiness checklists for product, API, technical, QA, launch, and pre-build review.
-- AI prompts for documentation generation, audit, testing, and build handoff.
-- Example packs for SaaS CRM and AI agent planning.
-- Zero runtime dependencies.
-
 ## Safety defaults
 
 - Existing files are not overwritten unless `--force` is passed.
 - `--dry-run` previews generated files without writing.
+- Missing context is written as `TBD` instead of being invented.
 - `.beforecoderc.json` saves project settings for future commands.
 - Generated docs are starter structures; final product, security, legal, and architecture decisions remain human-owned.
-- Missing context is written as `TBD` instead of being invented.
 
 ## Examples and references
 
@@ -180,6 +179,6 @@ your-project/
 
 <div align="center">
 
-If BeforeCode helps your project, star the repository and share the workflow.
+**BeforeCode helps teams start with clarity before opening the editor.**
 
 </div>
