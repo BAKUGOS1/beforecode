@@ -6,11 +6,11 @@ Describe the product and release.
 
 ## Goals
 
-- 
+- TBD
 
 ## Non-goals
 
-- 
+- TBD
 
 ## Users and Personas
 
@@ -32,8 +32,8 @@ Describe the product and release.
 
 ## Edge Cases
 
-- 
+- TBD
 
 ## Success Metrics
 
--
+- TBD
