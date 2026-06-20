@@ -6,6 +6,7 @@ test("help command prints usage", () => {
   const output = execFileSync("node", ["./bin/beforecode.js", "help"], { encoding: "utf8" });
   assert.match(output, /BeforeCode CLI/);
   assert.match(output, /beforecode init --type saas/);
+  assert.match(output, /beforecode doctor --type saas/);
 });
 
 test("list command prints project types", () => {
