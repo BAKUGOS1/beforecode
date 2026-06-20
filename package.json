@@ -21,6 +21,7 @@
     "prepublishOnly": "node ./scripts/verify-package.mjs"
   },
   "files": [
+    "assets",
     "bin",
     "src",
     "templates",
