@@ -10,7 +10,7 @@ Spec-first project planning toolkit and CLI for humans and AI coding agents.
 [![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-339933)](package.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-111827)](LICENSE)
 
-[Install](#install) · [Workflow](#workflow) · [Commands](#commands) · [Project types](#project-types) · [Examples](#examples)
+[Install](#install) · [Workflow](#workflow) · [Commands](#commands) · [Project types](#project-types) · [Examples](#examples) · [References](docs/references.md)
 
 </div>
 
@@ -145,12 +145,13 @@ your-project/
 - `.beforecoderc.json` saves project settings for future commands.
 - Generated docs are starter structures; final product, security, legal, and architecture decisions remain human-owned.
 
-## Examples
+## Examples and references
 
 - [SaaS CRM example](examples/saas-crm/README.md)
 - [AI agent example](examples/ai-agent/README.md)
 - [CLI usage guide](docs/cli-usage.md)
 - [Release runbook](docs/releasing.md)
+- [Reference material](docs/references.md)
 
 ## Requirements
 
