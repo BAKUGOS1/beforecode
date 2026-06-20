@@ -1,91 +1,156 @@
+<div align="center">
+
 # BeforeCode
 
-Spec-first project planning toolkit for humans and AI coding agents.
+**Plan first. Build with confidence.**
 
-Generate structured Markdown documentation packs before writing a single line of code.
+Spec-first project planning toolkit and CLI for humans and AI coding agents.
+
+[![npm](https://img.shields.io/npm/v/beforecode?color=cb3837)](https://www.npmjs.com/package/beforecode)
+[![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-339933)](package.json)
+[![License: MIT](https://img.shields.io/badge/License-MIT-111827)](LICENSE)
+
+[Install](#install) · [Workflow](#workflow) · [Commands](#commands) · [Project types](#project-types) · [Examples](#examples)
+
+</div>
+
+---
+
+BeforeCode helps you turn an idea into a build-ready documentation system before implementation starts. It generates connected Markdown documents for product requirements, UX, architecture, database, API, QA, deployment, and AI coding handoff.
 
 ## Install
 
+Use it directly with npm:
+
 ```bash
-npm install -g beforecode
+npx beforecode init --type saas --name "My App"
 ```
 
-Or use without installing:
+Or install it in a project:
 
 ```bash
-npx beforecode init --type saas
+npm install --save-dev beforecode
+npx beforecode init --type saas --name "My App"
+```
+
+Global install is also supported:
+
+```bash
+npm install --global beforecode
+beforecode init --type saas --name "My App"
+```
+
+## Workflow
+
+```mermaid
+flowchart LR
+    Idea[Idea] --> Research[Research]
+    Research --> Requirements[Requirements]
+    Requirements --> UX[UX and permissions]
+    UX --> Architecture[Architecture]
+    Architecture --> Data[Database and API]
+    Data --> QA[QA readiness]
+    QA --> Build[Implementation]
+    Build --> Release[Release]
+```
+
+The documents are intentionally connected:
+
+```mermaid
+flowchart TD
+    Brief[Project Brief] --> Research[Research Report]
+    Research --> PRD[PRD / SRS]
+    Brief --> PRD
+    PRD --> UX[UX Flows]
+    PRD --> Access[Permission Matrix]
+    PRD --> TRD[Technical Requirements]
+    UX --> TRD
+    Access --> TRD
+    TRD --> DB[Database Schema]
+    TRD --> API[API Documentation]
+    DB --> API
+    PRD --> QA[QA Test Plan]
+    API --> QA
+    QA --> Plan[Implementation Plan]
 ```
 
 ## Quick start
 
 ```bash
-# Generate a full documentation set for a SaaS project
-beforecode init --type saas --name "My App"
+# Generate a full documentation set
+npx beforecode init --type saas --name "My App"
 
 # Check which docs are present
-beforecode check
+npx beforecode check
 
-# See readiness score by category
-beforecode score
+# Show readiness score by category
+npx beforecode score
 
 # Generate AI coding agent handoff files
-beforecode handoff --name "My App"
+npx beforecode handoff --name "My App"
+```
+
+Generated structure:
+
+```text
+your-project/
+├── .beforecoderc.json
+└── docs/
+    ├── 01-project-brief.md
+    ├── 02-research-report.md
+    ├── 03-prd.md
+    ├── 04-trd.md
+    ├── 05-database-schema.md
+    ├── 06-api-documentation.md
+    ├── 07-qa-test-plan.md
+    └── 08-implementation-plan.md
 ```
 
 ## Commands
 
 | Command | Description |
-|---------|-------------|
-| `beforecode init --type <type>` | Generate a numbered doc set |
+|---|---|
+| `beforecode init --type <type>` | Generate a numbered documentation set |
 | `beforecode add <template>` | Add a single template |
 | `beforecode check` | Check which docs exist |
 | `beforecode score` | Show readiness by category |
-| `beforecode handoff` | Generate `AGENTS.md` and `ai-handoff.md` |
+| `beforecode handoff` | Generate `AGENTS.md` and AI handoff docs |
 | `beforecode list` | Show project types and templates |
-
-## Options
-
-| Flag | Description |
-|------|-------------|
-| `--type <type>` | Project type (saas, crm, mobile, etc.) |
-| `--name <name>` | Project name |
-| `--docs <path>` | Documentation folder (default: `docs`) |
-| `--force` | Overwrite existing files |
-| `--dry-run` | Preview without writing |
-| `--version` | Show version |
 
 ## Project types
 
-- **small** — Small app
-- **portfolio** — Portfolio site
-- **saas** — SaaS product
-- **crm** — CRM or operations system
-- **ecommerce** — E-commerce or marketplace
-- **mobile** — Mobile app
-- **ai-agent** — AI agent
-- **opensource** — Open-source tool
+| Type | Best for |
+|---|---|
+| `small` | Prototype or small app |
+| `portfolio` | Portfolio or personal website |
+| `saas` | Multi-user SaaS product |
+| `crm` | CRM, ERP, or operations system |
+| `ecommerce` | Store or marketplace |
+| `mobile` | Mobile application |
+| `ai-agent` | Tool-using or autonomous AI agent |
+| `opensource` | Public library, CLI, or developer tool |
 
-## How it works
+## What is included
 
-1. Run `beforecode init --type saas` in your project.
-2. Numbered Markdown files are created in `docs/` from templates.
-3. A `.beforecoderc.json` config is saved so future commands auto-detect your project.
-4. Fill in the docs with your product requirements, technical design, and test plans.
-5. Run `beforecode check` and `beforecode score` to track completeness.
-6. Run `beforecode handoff` to generate `AGENTS.md` for AI coding agents.
+- 17 document templates: PRD, TRD, SRS, database schema, API docs, QA plan, release scope, and more.
+- Readiness checklists for product, API, technical, QA, launch, and pre-build review.
+- AI prompts for documentation generation, audit, testing, and build handoff.
+- Example packs for SaaS CRM and AI agent planning.
+- Zero runtime dependencies.
 
-## What's included
+## Safety defaults
 
-- **17 document templates** — PRD, TRD, SRS, database schema, API docs, and more.
-- **6 readiness checklists** — Pre-build, PRD review, QA, API, technical, and launch.
-- **AI prompts** — Ready-made prompts for ChatGPT and Codex-style agents.
-- **Example packs** — Complete reference documentation for SaaS CRM and AI Agent projects.
+- Existing files are not overwritten unless `--force` is passed.
+- `--dry-run` previews generated files without writing.
+- `.beforecoderc.json` saves project settings for future commands.
+- Generated docs are starter structures; final product, security, legal, and architecture decisions remain human-owned.
 
-## Safe defaults
+## Examples
 
-- Files are never overwritten unless you pass `--force`.
-- `--dry-run` lets you preview before writing.
-- Zero dependencies — runs on Node.js built-ins only.
+- [SaaS CRM example](examples/saas-crm/README.md)
+- [AI agent example](examples/ai-agent/README.md)
+- [CLI usage guide](docs/cli-usage.md)
+- [Release runbook](docs/releasing.md)
 
 ## Requirements
 
@@ -94,3 +159,9 @@ beforecode handoff --name "My App"
 ## License
 
 [MIT](LICENSE)
+
+<div align="center">
+
+If BeforeCode helps your project, star the repository and share the workflow.
+
+</div>
