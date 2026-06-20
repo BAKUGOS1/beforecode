@@ -21,8 +21,8 @@ Describe the data model.
 
 ## Relationships
 
-- 
+- TBD
 
 ## Indexes and Constraints
 
--
+- TBD
