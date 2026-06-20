@@ -28,6 +28,7 @@
     "checklists",
     "prompts",
     "docs/cli-usage.md",
+    "examples",
     "README.md",
     "LICENSE"
   ],
