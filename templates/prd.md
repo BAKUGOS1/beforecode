@@ -1,39 +1,45 @@
 # Product Requirements Document
 
+## Source Context
+
+{{sourceContext}}
+
 ## Overview
 
-Describe the product and release.
+{{idea}}
+
+## Problem
+
+{{problem}}
 
 ## Goals
 
-- TBD
+- TBD — confirm goals from the source context.
 
 ## Non-goals
 
-- TBD
+{{outOfScope}}
 
 ## Users and Personas
 
-| Persona | Need |
-|---|---|
-|  |  |
+{{targetUsers}}
 
 ## Functional Requirements
 
 | ID | Requirement | Priority | Acceptance Criteria |
 |---|---|---|---|
-| FR-001 |  | Must |  |
+| FR-001 | TBD — derive only from confirmed MVP features: {{mvpFeatures}} | Must | TBD |
 
 ## Non-functional Requirements
 
 | ID | Requirement | Target |
 |---|---|---|
-| NFR-001 |  |  |
+| NFR-001 | TBD | TBD |
 
 ## Edge Cases
 
-- TBD
+- TBD — answer open questions before implementation.
 
 ## Success Metrics
 
-- TBD
+- TBD — define measurable v1 success criteria.
