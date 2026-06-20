@@ -20,23 +20,25 @@ BeforeCode helps you turn an idea into a build-ready documentation system before
 
 ## Install
 
-Use it directly with npm:
+The easiest way to start is with `npx`. This runs the latest published package without adding it to your project first.
 
 ```bash
 npx beforecode init --type saas --name "My App"
 ```
 
-Or install it in a project:
+For teams and repeat usage, install BeforeCode as a development dependency so every contributor uses the same CLI version.
 
 ```bash
 npm install --save-dev beforecode
+npx beforecode --version
 npx beforecode init --type saas --name "My App"
 ```
 
-Global install is also supported:
+Global install is optional. Use it only when you want the `beforecode` command available everywhere on your machine.
 
 ```bash
 npm install --global beforecode
+beforecode --version
 beforecode init --type saas --name "My App"
 ```
 
