@@ -46,7 +46,7 @@ async function resolveProjectContext(options, cwd, resolved) {
 
   const inlineContext = normalizeContext({
     projectName: options.name || resolved.projectName,
-    projectType: options.type || resolved.projectType,
+    projectType: options.type,
     rawIdea: options.idea,
     problem: options.problem,
     targetUsers: options.users,
