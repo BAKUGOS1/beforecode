@@ -1,31 +1,33 @@
 # {{projectName}} Project Brief
 
+## Source Context
+
+{{sourceContext}}
+
 ## One-line Summary
 
-Describe the project in one sentence.
+{{idea}}
 
 ## Problem Statement
 
-What problem is being solved and why now?
+{{problem}}
 
 ## Target Users
 
-- Primary user:
-- Secondary user:
+{{targetUsers}}
 
 ## Goals
 
-- Goal 1
-- Goal 2
+- TBD — confirm goals from the source context.
 
 ## MVP Scope
 
-What is included in the first useful version?
+{{mvpFeatures}}
 
 ## Out of Scope
 
-What is intentionally not included?
+{{outOfScope}}
 
 ## Success Criteria
 
-How will the project be judged successful?
+TBD — define the measurable outcome that proves v1 worked.
