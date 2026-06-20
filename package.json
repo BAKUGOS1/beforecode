@@ -4,7 +4,7 @@
   "description": "Spec-first project planning toolkit for humans and AI coding agents.",
   "type": "module",
   "bin": {
-    "beforecode": "./bin/beforecode.js"
+    "beforecode": "bin/beforecode.js"
   },
   "repository": {
     "type": "git",
