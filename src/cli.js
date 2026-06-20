@@ -1,5 +1,6 @@
 import { parseArgs } from "./args.js";
 import { getProjectTypes } from "./data/project-types.js";
+import { startCommand } from "./commands/start.js";
 import { initCommand } from "./commands/init.js";
 import { addCommand } from "./commands/add.js";
 import { checkCommand } from "./commands/check.js";
@@ -22,6 +23,7 @@ export async function runCli(argv, context = { cwd: process.cwd() }) {
     return printHelp();
   }
 
+  if (command === "start") return startCommand(options, context);
   if (command === "init") return initCommand(options, context);
   if (command === "add") return addCommand(options, context);
   if (command === "check") return checkCommand(options, context);
@@ -41,8 +43,10 @@ function printHelp() {
   console.log(`BeforeCode CLI
 
 Usage:
+  beforecode start
+  beforecode start --from idea.md
+  beforecode start --idea "CRM for small teams" --type saas
   beforecode init --type saas
-  beforecode init --type ai-agent --docs project-docs
   beforecode add prd
   beforecode check --type saas
   beforecode score --type saas
@@ -54,6 +58,10 @@ Options:
   --type <type>       Project type
   --docs <path>       Documentation folder
   --name <name>       Project name
+  --from <file>       Read project idea/context from a Markdown file
+  --idea <text>       Provide idea text without interactive prompts
+  --features <list>   Comma-separated MVP features
+  --users <list>      Comma-separated target users
   --force             Replace existing generated files
   --dry-run           Preview changes without writing files
   --version           Show version
