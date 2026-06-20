@@ -16,38 +16,44 @@ Spec-first project planning toolkit and CLI for humans and AI coding agents.
 
 ---
 
-BeforeCode helps you turn an idea into a build-ready documentation system before implementation starts. It generates connected Markdown documents for product requirements, UX, architecture, database, API, QA, deployment, and AI coding handoff.
+BeforeCode helps you turn an idea into a build-ready documentation system before implementation starts. It captures project context first, then generates connected Markdown documents for product requirements, UX, architecture, database, API, QA, deployment, and AI coding handoff.
 
 ## Install
 
-The easiest way to start is with `npx`. This runs the latest published package without adding it to your project first.
-
-```bash
-npx beforecode init --type saas --name "My App"
-```
-
-For teams and repeat usage, install BeforeCode as a development dependency so every contributor uses the same CLI version.
+Recommended project setup:
 
 ```bash
 npm install --save-dev beforecode
-npx beforecode --version
-npx beforecode init --type saas --name "My App"
+npx beforecode start
 ```
 
-Global install is optional. Use it only when you want the `beforecode` command available everywhere on your machine.
+`beforecode start` asks for your idea, target users, problem, MVP scope, out-of-scope items, technical preferences, and build mode before it creates docs.
+
+Use without installing:
 
 ```bash
-npm install --global beforecode
-beforecode --version
-beforecode init --type saas --name "My App"
+npx beforecode start
+```
+
+Use a prepared idea file:
+
+```bash
+npx beforecode start --from idea.md
+```
+
+Advanced quick-template mode:
+
+```bash
+npx beforecode init --type saas --name "My App"
 ```
 
 ## Workflow
 
 ```mermaid
 flowchart LR
-    Idea[Idea] --> Research[Research]
-    Research --> Requirements[Requirements]
+    Idea[Idea] --> Context[Project context]
+    Context --> Questions[Open questions]
+    Questions --> Requirements[Requirements]
     Requirements --> UX[UX and permissions]
     UX --> Architecture[Architecture]
     Architecture --> Data[Database and API]
@@ -60,8 +66,9 @@ The documents are intentionally connected:
 
 ```mermaid
 flowchart TD
-    Brief[Project Brief] --> Research[Research Report]
-    Research --> PRD[PRD / SRS]
+    Context[00 Project Context] --> Questions[01 Open Questions]
+    Context --> Brief[Project Brief]
+    Questions --> PRD[PRD / SRS]
     Brief --> PRD
     PRD --> UX[UX Flows]
     PRD --> Access[Permission Matrix]
@@ -79,8 +86,8 @@ flowchart TD
 ## Quick start
 
 ```bash
-# Generate a full documentation set
-npx beforecode init --type saas --name "My App"
+# Capture context and generate a planning workspace
+npx beforecode start
 
 # Check which docs are present
 npx beforecode check
@@ -101,21 +108,23 @@ Generated structure:
 your-project/
 ├── .beforecoderc.json
 └── docs/
-    ├── 01-project-brief.md
-    ├── 02-research-report.md
-    ├── 03-prd.md
-    ├── 04-trd.md
-    ├── 05-database-schema.md
-    ├── 06-api-documentation.md
-    ├── 07-qa-test-plan.md
-    └── 08-implementation-plan.md
+    ├── 00-project-context.md
+    ├── 01-open-questions.md
+    ├── 03-project-brief.md
+    ├── 04-research-report.md
+    ├── 05-prd.md
+    ├── 06-ux-flows.md
+    ├── 07-trd.md
+    └── ...
 ```
 
 ## Commands
 
 | Command | Description |
 |---|---|
-| `beforecode init --type <type>` | Generate a numbered documentation set |
+| `beforecode start` | Capture project context first, then generate docs |
+| `beforecode start --from idea.md` | Generate docs from an idea/context file |
+| `beforecode init --type <type>` | Advanced quick-template mode |
 | `beforecode add <template>` | Add a single template |
 | `beforecode check` | Check which docs exist |
 | `beforecode score` | Show readiness by category |
@@ -138,6 +147,7 @@ your-project/
 
 ## What is included
 
+- Context-first planning flow that avoids random demo docs.
 - 17 document templates: PRD, TRD, SRS, database schema, API docs, QA plan, release scope, and more.
 - Readiness checklists for product, API, technical, QA, launch, and pre-build review.
 - AI prompts for documentation generation, audit, testing, and build handoff.
@@ -150,6 +160,7 @@ your-project/
 - `--dry-run` previews generated files without writing.
 - `.beforecoderc.json` saves project settings for future commands.
 - Generated docs are starter structures; final product, security, legal, and architecture decisions remain human-owned.
+- Missing context is written as `TBD` instead of being invented.
 
 ## Examples and references
 
