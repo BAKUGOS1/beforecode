@@ -19,12 +19,12 @@
 
 ## Why BeforeCode?
 
-Most projects start coding too early. BeforeCode creates a planning workspace that captures the real idea first, asks for missing context, and then generates build-ready Markdown documentation.
+BeforeCode creates a planning workspace that captures the real idea first, asks for missing context, and then generates build-ready Markdown documentation.
 
 | Without BeforeCode | With BeforeCode |
 |---|---|
-| Random template docs | Context-aware docs |
-| AI agents guess missing details | Missing details become open questions |
+| Generic docs | Context-aware docs |
+| Missing decisions hidden | Missing decisions become open questions |
 | PRD, TRD, QA drift apart | Docs share one source of truth |
 | Build starts before scope is clear | Build starts from reviewed context |
 
@@ -83,19 +83,10 @@ flowchart TD
 ## Quick start
 
 ```bash
-# Capture context and generate a planning workspace
 npx beforecode start
-
-# Check which docs are present
 npx beforecode check
-
-# Show readiness score by category
 npx beforecode score
-
-# Run a project health audit
 npx beforecode doctor
-
-# Generate AI coding handoff files
 npx beforecode handoff --name "My App"
 ```
 
@@ -114,17 +105,6 @@ your-project/
     ├── 07-trd.md
     └── ...
 ```
-
-## What it generates
-
-| Area | Output |
-|---|---|
-| Context | `00-project-context.md`, `.beforecoderc.json` |
-| Discovery | `01-open-questions.md`, research report, business requirements |
-| Product | PRD, SRS, release scope, UX flows, permission matrix |
-| Engineering | TRD, database schema, API documentation, implementation plan |
-| Quality | QA test plan, readiness scoring, doctor audit |
-| AI handoff | `AGENTS.md`, `docs/ai-handoff.md` |
 
 ## Commands
 
@@ -159,12 +139,14 @@ your-project/
 - `--dry-run` previews generated files without writing.
 - Missing context is written as `TBD` instead of being invented.
 - `.beforecoderc.json` saves project settings for future commands.
-- Generated docs are starter structures; final product, security, legal, and architecture decisions remain human-owned.
 
 ## Examples and references
 
-- [SaaS CRM example](examples/saas-crm/README.md)
-- [AI agent example](examples/ai-agent/README.md)
+- [Examples gallery](examples/README.md)
+- [SaaS CRM Pro reference pack](examples/saas-crm-pro/README.md)
+- [AI Video Editor reference pack](examples/ai-video-editor/README.md)
+- [Browser QA Agent reference pack](examples/browser-qa-agent/README.md)
+- [Example quality standard](examples/example-quality-standard.md)
 - [CLI usage guide](docs/cli-usage.md)
 - [Release runbook](docs/releasing.md)
 - [Reference material](docs/references.md)
