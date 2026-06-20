@@ -1,1 +1,1 @@
-export const foo = true;
+export const INTERNAL_PLACEHOLDER = true;
