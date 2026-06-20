@@ -4,10 +4,11 @@ import { initCommand } from "./commands/init.js";
 import { addCommand } from "./commands/add.js";
 import { checkCommand } from "./commands/check.js";
 import { scoreCommand } from "./commands/score.js";
+import { doctorCommand } from "./commands/doctor.js";
 import { handoffCommand } from "./commands/handoff.js";
 import { listCommand } from "./commands/list.js";
 
-const VERSION = "0.1.0";
+const VERSION = "0.2.0";
 
 export async function runCli(argv, context = { cwd: process.cwd() }) {
   const options = parseArgs(argv);
@@ -25,6 +26,7 @@ export async function runCli(argv, context = { cwd: process.cwd() }) {
   if (command === "add") return addCommand(options, context);
   if (command === "check") return checkCommand(options, context);
   if (command === "score") return scoreCommand(options, context);
+  if (command === "doctor") return doctorCommand(options, context);
   if (command === "handoff") return handoffCommand(options, context);
   if (command === "list") return listCommand(options, context);
 
@@ -44,6 +46,7 @@ Usage:
   beforecode add prd
   beforecode check --type saas
   beforecode score --type saas
+  beforecode doctor --type saas
   beforecode handoff
   beforecode list
 
