@@ -3,8 +3,9 @@ import { TEMPLATE_DIR } from "../paths.js";
 import { ensureDir, exists, readText, writeText } from "../fs-utils.js";
 import { getProjectDocs, getProjectType } from "../data/project-types.js";
 import { getTemplateFile } from "../data/templates.js";
-import { VERSION } from "../version.js";
 import { writeConfig } from "./config.js";
+
+const VERSION = "0.1.0";
 
 export async function initProject({ cwd, projectName, projectType, docsPath, force = false, dryRun = false }) {
   const docs = getProjectDocs(projectType);

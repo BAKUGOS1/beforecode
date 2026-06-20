@@ -1,74 +1,28 @@
 # Research Report
 
-## Document Control
+## Research Objective
 
-| Field | Value |
-|---|---|
-| Research owner |  |
-| Objective |  |
-| Period |  |
-| Status | Draft / Reviewed / Approved |
+What decisions should this research support?
 
-## 1. Research Questions
+## Market / User Context
 
-List the decisions this research must support. Separate facts to discover from assumptions to test.
+Summarize the relevant context.
 
-## 2. Method
+## Competitor / Reference Products
 
-| Method | Sample/source | Limitations |
+| Product | Strength | Gap |
 |---|---|---|
-| Interviews / survey / desk research / prototype |  |  |
+|  |  |  |
 
-## 3. Problem and User Evidence
+## User Expectations
 
-Summarize observed pain points, frequency, severity, current workarounds, and willingness to change. Distinguish evidence from interpretation.
+- Expectation 1
+- Expectation 2
 
-## 4. Market and Context
+## Recommended Direction
 
-Describe relevant market, regulatory, platform, technology, and behavioral context. Include dates because conditions can change.
+State the product and technical direction supported by evidence.
 
-## 5. Alternatives and Competitors
+## References
 
-| Alternative | Target user | Strengths | Weaknesses | Pricing/effort | Evidence |
-|---|---|---|---|---|---|
-|  |  |  |  |  |  |
-
-## 6. Common Expectations
-
-List capabilities users consider basic, trust factors they require, and patterns they already understand.
-
-## 7. Gaps and Opportunities
-
-| Finding | Evidence strength | Opportunity | Product implication |
-|---|---|---|---|
-|  | High / Medium / Low |  |  |
-
-## 8. Technical Research
-
-Record important architecture options, integration constraints, data availability, security concerns, and feasibility findings.
-
-## 9. Key Findings
-
-Number the findings. For each, include evidence, confidence, and what decision it changes.
-
-## 10. Recommendation
-
-State the recommended direction, rejected alternatives, expected trade-offs, and the smallest useful validation step.
-
-## 11. Risks and Unknowns
-
-| Unknown | Why it matters | Validation method | Owner |
-|---|---|---|---|
-|  |  |  |  |
-
-## 12. Sources
-
-Use primary and authoritative sources where possible. Record title, publisher, URL, publication/update date, and access date.
-
-## Research Quality Check
-
-- Claims are traceable to evidence
-- Sources are current enough for the decision
-- Conflicting evidence is disclosed
-- Sample and method limitations are visible
-- Recommendations clearly follow from findings
+-

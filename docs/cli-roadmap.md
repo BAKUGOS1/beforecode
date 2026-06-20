@@ -1,41 +1,29 @@
 # CLI Roadmap
 
-## v0.1 — MVP Complete
+## v0.1
 
-- [x] Generate docs by project type
-- [x] Add one template
-- [x] Check missing docs
-- [x] Show readiness score
-- [x] Generate basic AI handoff files
-- [x] Preserve existing files by default
-- [x] Support dry-run and explicit force modes
-- [x] Add Node.js test workflow
-- [x] Document GitHub installation from `main`
-- [x] Keep runtime and package versions synchronized
-- [x] Verify the packed CLI in a clean consumer project
-- [x] Add manual protected npm release automation
+- Generate docs by project type
+- Add one template
+- Check missing docs
+- Show readiness score
+- Generate basic AI handoff files
+- Add Node test workflow
 
-## v0.2 — Guided Setup
+## v0.2
 
-- [ ] Interactive project questionnaire
-- [ ] Template variable injection beyond basic project fields
-- [ ] Better configuration editing and validation
-- [ ] More project-specific template packs
-- [ ] Improved terminal output and actionable missing-doc guidance
+- Interactive prompts
+- Template variable injection
+- More project-specific template packs
+- Better config editing
 
-## v0.3 — Quality Intelligence
+## v0.3
 
-- [ ] Section-level readiness checks
-- [ ] Requirement traceability report
-- [ ] Cross-document terminology checks
-- [ ] AI handoff profiles for common coding tools
-- [ ] Machine-readable JSON output for CI and integrations
+- Section-level readiness checks
+- Traceability report
+- AI handoff profiles for common coding tools
 
-## v1.0 — Stable Distribution
+## v1.0
 
-- [ ] Publish and maintain the npm package
-- [ ] Configure npm trusted publishing after the first release
-- [ ] Stable command and configuration contracts
-- [ ] Versioned template packs
-- [ ] Upgrade and migration guidance
-- [ ] Documentation website integration
+- Stable npm package
+- Versioned template packs
+- Strong docs site integration

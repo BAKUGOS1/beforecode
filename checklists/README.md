@@ -1,24 +1,10 @@
-# Readiness Checklists
+# Checklists
 
-Checklists are quality gates, not substitutes for judgment. Record unresolved items, owners, and accepted risks instead of checking boxes without evidence.
+Use these checklists as quality gates before implementation and release.
 
-| Checklist | When to use |
-|---|---|
-| [PRD Review](prd-review-checklist.md) | Before product scope is approved |
-| [Technical Readiness](technical-readiness-checklist.md) | Before architecture is accepted |
-| [API Readiness](api-readiness-checklist.md) | Before API implementation or publication |
-| [Pre-Build](pre-build-checklist.md) | Before the first implementation phase |
-| [QA Readiness](qa-readiness-checklist.md) | Before formal testing begins |
-| [Launch Readiness](launch-readiness-checklist.md) | Before production release |
-
-## Suggested evidence format
-
-```text
-Item:
-Status: Pass | Fail | Accepted risk | Not applicable
-Evidence:
-Owner:
-Follow-up date:
-```
-
-For high-risk projects, review checklists with product, engineering, security, QA, and operations representatives rather than one author alone.
+- [Pre-build Checklist](pre-build-checklist.md)
+- [PRD Review Checklist](prd-review-checklist.md)
+- [Technical Readiness Checklist](technical-readiness-checklist.md)
+- [API Readiness Checklist](api-readiness-checklist.md)
+- [QA Readiness Checklist](qa-readiness-checklist.md)
+- [Launch Readiness Checklist](launch-readiness-checklist.md)

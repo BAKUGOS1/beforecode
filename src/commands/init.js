@@ -1,3 +1,4 @@
+import { relative } from "node:path";
 import { resolveOptions } from "../core/config.js";
 import { initProject } from "../core/generator.js";
 
@@ -21,6 +22,3 @@ export async function initCommand(options, context) {
   console.log("Config: .beforecoderc.json");
 }
 
-function relative(cwd, file) {
-  return file.replace(`${cwd}/`, "").replace(`${cwd}\\`, "");
-}

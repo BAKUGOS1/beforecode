@@ -1,63 +1,24 @@
 # Deployment Plan
 
-## 1. Release Overview
+## Environments
 
-| Field | Value |
-|---|---|
-| Release/version |  |
-| Owner |  |
-| Window |  |
-| Risk level |  |
-| Rollback authority |  |
+- Local
+- Staging
+- Production
 
-Describe user impact and major changes.
+## Release Steps
 
-## 2. Environments
+1. Review scope
+2. Run QA checklist
+3. Deploy
+4. Verify release
 
-| Environment | Purpose | Data policy | Access | Deployment source |
-|---|---|---|---|---|
-| Local |  |  |  |  |
-| Staging |  |  |  |  |
-| Production |  |  |  |  |
+## Rollback Plan
 
-## 3. Preconditions
+Describe rollback steps.
 
-- CI and required reviews pass
-- Release artifact/version is immutable
-- Secrets and configuration are verified
-- Backup/restore and migration plans are reviewed
-- Support, monitoring, and communication are ready
+## Post-release Checks
 
-## 4. Configuration and Secrets
-
-List variable name, owner, environment, source, rotation, and whether it is required. Never include secret values.
-
-## 5. Database and Data Migration
-
-Define migration order, compatibility window, backup, lock/downtime risk, backfill, verification queries, and forward-fix/rollback.
-
-## 6. Deployment Steps
-
-| Step | Action | Owner | Expected evidence | Stop condition |
-|---:|---|---|---|---|
-| 1 |  |  |  |  |
-
-## 7. Rollout Strategy
-
-Describe feature flags, canary/staged percentage, tenant/user targeting, duration, and promotion criteria.
-
-## 8. Verification
-
-Cover health checks, authentication, critical workflows, permissions, integrations, data integrity, logs, metrics, and performance.
-
-## 9. Rollback
-
-Define triggers, decision owner, application rollback, database response, configuration rollback, user communication, and post-rollback checks.
-
-## 10. Monitoring and Incident Response
-
-List dashboards, alerts, thresholds, on-call owner, incident channel, and correlation identifiers.
-
-## 11. Completion
-
-Record deployment time, version, verification evidence, incidents, accepted risks, and follow-up actions.
+- Main flows work
+- Logs monitored
+- Support path ready

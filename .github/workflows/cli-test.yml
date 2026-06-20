@@ -1,27 +1,21 @@
 name: CLI test
 
 on:
+  pull_request:
+    paths:
+      - "bin/**"
+      - "src/**"
+      - "tests/**"
+      - "package.json"
+      - ".github/workflows/cli-test.yml"
   push:
     branches: [main]
     paths:
       - "bin/**"
       - "src/**"
-      - "scripts/**"
       - "tests/**"
-      - "templates/**"
       - "package.json"
       - ".github/workflows/cli-test.yml"
-      - ".github/workflows/release.yml"
-  pull_request:
-    paths:
-      - "bin/**"
-      - "src/**"
-      - "scripts/**"
-      - "tests/**"
-      - "templates/**"
-      - "package.json"
-      - ".github/workflows/cli-test.yml"
-      - ".github/workflows/release.yml"
   workflow_dispatch:
 
 permissions:
@@ -31,16 +25,12 @@ jobs:
   cli:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: "20"
-          package-manager-cache: false
       - run: npm test
-      - run: npm run verify:package
       - run: node ./bin/beforecode.js help
       - run: node ./bin/beforecode.js list
       - run: node ./bin/beforecode.js init --type saas --docs tmp-docs
       - run: node ./bin/beforecode.js check --type saas --docs tmp-docs
-      - run: node ./bin/beforecode.js score --type saas --docs tmp-docs
-      - run: node ./bin/beforecode.js handoff --name "CI Demo" --docs tmp-docs

@@ -1,4 +1,4 @@
-# TaskPilot TRD
+# Tool Permission Plan
 
 ## Overview
 

@@ -29,5 +29,5 @@ export async function scoreCommand(options, context) {
 }
 
 function label(value) {
-  return value.replace("-", " ").replace(/\b\w/g, (char) => char.toUpperCase());
+  return value.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 }
