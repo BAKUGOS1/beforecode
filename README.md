@@ -86,6 +86,9 @@ npx beforecode check
 # Show readiness score by category
 npx beforecode score
 
+# Run a project health audit
+npx beforecode doctor
+
 # Generate AI coding agent handoff files
 npx beforecode handoff --name "My App"
 ```
@@ -114,6 +117,7 @@ your-project/
 | `beforecode add <template>` | Add a single template |
 | `beforecode check` | Check which docs exist |
 | `beforecode score` | Show readiness by category |
+| `beforecode doctor` | Audit missing docs, weak docs, config, and AI handoff readiness |
 | `beforecode handoff` | Generate `AGENTS.md` and AI handoff docs |
 | `beforecode list` | Show project types and templates |
 
