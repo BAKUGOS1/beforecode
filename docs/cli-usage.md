@@ -10,7 +10,30 @@ node ./bin/beforecode.js help
 node ./bin/beforecode.js list
 ```
 
-## Generate a docs set
+## Recommended context-first start
+
+Install BeforeCode in your project:
+
+```bash
+npm install --save-dev beforecode
+npx beforecode start
+```
+
+`beforecode start` asks for project context before generating docs. This prevents generic demo documentation and creates a planning workspace from the user's real idea.
+
+Use a prepared idea file:
+
+```bash
+beforecode start --from idea.md
+```
+
+Preview without writing files:
+
+```bash
+beforecode start --from idea.md --dry-run
+```
+
+## Advanced quick-template mode
 
 ```bash
 beforecode init --type saas
