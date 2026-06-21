@@ -4,10 +4,13 @@
 
 <br />
 
-[![npm](https://img.shields.io/npm/v/beforecode?color=cb3837)](https://www.npmjs.com/package/beforecode)
+[![npm version](https://img.shields.io/npm/v/beforecode?color=cb3837&label=npm)](https://www.npmjs.com/package/beforecode)
+[![npm downloads](https://img.shields.io/npm/dm/beforecode?color=2563eb&label=downloads)](https://www.npmjs.com/package/beforecode)
 [![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-339933)](package.json)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-111827)](LICENSE)
 [![CLI test](https://github.com/BAKUGOS1/beforecode/actions/workflows/cli-test.yml/badge.svg)](https://github.com/BAKUGOS1/beforecode/actions/workflows/cli-test.yml)
+[![GitHub stars](https://img.shields.io/github/stars/BAKUGOS1/beforecode?style=social)](https://github.com/BAKUGOS1/beforecode/stargazers)
 
 **Context-first project planning toolkit for humans and AI coding agents.**
 
