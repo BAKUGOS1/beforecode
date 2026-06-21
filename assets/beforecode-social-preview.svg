@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="BeforeCode GitHub social preview">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6D28D9"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="code" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6D28D9"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <filter id="iconShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#0B0B12" flood-opacity="0.12"/>
+    </filter>
+    <pattern id="grain" width="120" height="120" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="18" r="0.45" fill="#0B0B12" opacity="0.035"/>
+      <circle cx="52" cy="33" r="0.38" fill="#0B0B12" opacity="0.028"/>
+      <circle cx="91" cy="72" r="0.42" fill="#0B0B12" opacity="0.03"/>
+      <circle cx="25" cy="103" r="0.35" fill="#0B0B12" opacity="0.025"/>
+      <circle cx="104" cy="19" r="0.32" fill="#0B0B12" opacity="0.02"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="640" fill="#FAFAF7"/>
+  <rect width="1280" height="640" fill="url(#grain)"/>
+
+  <g transform="translate(136 232)" filter="url(#iconShadow)">
+    <path d="M75 0 L150 43.3 L150 129.9 L75 173.2 L0 129.9 L0 43.3 Z" fill="none" stroke="url(#brand)" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M52 58 L84 86.5 L52 115" fill="none" stroke="url(#brand)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M95 112 H123" fill="none" stroke="url(#brand)" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(352 245)">
+    <text x="0" y="82" font-family="Inter, General Sans, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="92" font-weight="900" letter-spacing="-5" fill="#0B0B12">Before<tspan fill="url(#code)">Code</tspan></text>
+    <text x="2" y="132" font-family="Inter, General Sans, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="30" font-weight="500" letter-spacing="-0.7" fill="#667085">Plan your software project before writing code.</text>
+  </g>
+</svg>
