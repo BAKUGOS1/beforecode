@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/beforecode-banner.svg" alt="BeforeCode — context-first planning toolkit" width="100%" />
+<img src="assets/beforecode-social-preview.svg" alt="BeforeCode — plan your software project before writing code" width="100%" />
 
 <br />
 
