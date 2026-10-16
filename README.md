@@ -167,3 +167,7 @@ your-project/
 **BeforeCode helps teams start with clarity before opening the editor.**
 
 </div>
+
+<!-- mohitstack-portfolio -->
+Built by [Mohit Kumar](https://mohitstack.vercel.app). [Project case study](https://mohitstack.vercel.app/work/beforecode).
+<!-- /mohitstack-portfolio -->
